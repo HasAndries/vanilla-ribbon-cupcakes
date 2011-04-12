@@ -1,12 +1,12 @@
 html {
-  background: #FFF; }
+  background: #FFF8E1; }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
   margin: 0;
   padding: 0; }
 
 body {
-    color: #666;
+    color: #4F2912;
     background: transparent;
     font: 100 14px/1.5 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0 auto;
@@ -18,9 +18,9 @@ body p {
 body a {
     outline: none;
     text-decoration: none;
-    color: #000; }
+    color: #4F2912; }
 body a:hover {
-    color: #e016c1; }
+    color: #42849d; }
 body img {
     background: #111; }
 
@@ -38,16 +38,14 @@ input, textarea {
 
 /* Header */
 #header {
-    padding: 60px 0 30px 0;
-    border-bottom: 1px solid #222; }
+    border-bottom: 3px solid #4F2912;
+    padding-bottom: 20px; }
 #header h1 {
-    width: 332px;
-    font: 18px/1 "FF DIN", Helvetica, Arial, sans-serif; }
+    width: 384px; }
 #header h1 a {
+    background: url(/images/logo.png);
     display: block;
-    height: 32px;
-    font: 32px/1 "FF DIN", Helvetica, Arial, sans-serif;
-    /*text-indent: -9000px;*/}
+    height: 102px; }
 
 #nav ul {
     position: absolute;
@@ -59,8 +57,9 @@ input, textarea {
     text-transform: uppercase;
     letter-spacing: 1px;
     font: 12px/1 "FF DIN", Helvetica, Arial, sans-serif;
-    color: #444; }
+    color: #55453c; }
 #nav ul li a {
+    font-weight: bold;
     display: block;
     margin-bottom: 5px;
     font-size: 14px; }
@@ -68,11 +67,12 @@ input, textarea {
     padding: 0 12px 0 28px; }
 #nav ul li:not(:first-child) {
     padding: 0 12px 0 28px;
-    background: url(/images/nav_divide.png) left no-repeat; }
+    background: url(/images/nav_divide.png) left no-repeat;
+    }
 #nav ul li.active, #nav ul li:hover {
-    color: #9a7e95; }
+    color: #f392b0; }
 #nav ul li.active a, #nav ul li:hover a {
-    color: #e016c1; }
+    color: #42849d; }
 
 /* Content */
 #content {
@@ -81,11 +81,11 @@ input, textarea {
 
 #content h1 {
     font: 30px/1 "FF DIN", Helvetica, Arial, sans-serif;
-    color: #e016c1;}
+    color: #f392b0;}
 
 /* Footer */
 #footer {
-    border-top: 1px solid #222;
+    border-top: 3px solid #4F2912;
     height: 40px;
     padding-top: 20px;
     width: 960px; }
@@ -95,12 +95,12 @@ input, textarea {
     text-transform: uppercase;
     letter-spacing: 1px;
     font: 12px/1 "FF DIN", Helvetica, Arial, sans-serif;
-    color: #333; }
+    color: #4F2912; }
 
 #footer p a {
   color: #333; }
 #footer p a:hover {
-  color: #e016c1; }
+  color: #f392b0; }
 #footer #credit {
     position: absolute;
     top: 30px;
