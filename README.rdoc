@@ -1,0 +1,27 @@
+= MiXAPI
+
+The MiX API is the full featured API to provide access to all information within Mix Telematics in an easy and
+usefull manner. It's implemented on-top of Ananke, and provides a REST-ful API.
+
+Clone the Project and run with:
+
+  bundle install
+  thin start
+
+== REST Resources
+The Current entry point for the API is:
+
+== Media Types
+TODO
+
+
+== Data
+TODO
+
+== ODBC
+
+== More
+
+* {ananke}[https://github.com/HasAndries/ananke]
+* {Project Website}[https://github.com/MiXTelematics/MiXAPI]
+* {Issue tracker}[https://github.com/MiXTelematics/MiXAPI/issues]
