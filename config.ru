@@ -15,7 +15,8 @@ ENV['ROOT'] = File.dirname(__FILE__)
 app = Rack::Builder.new {
   use Rack::CommonLogger
   use Rack::ShowExceptions
-  
+
+  map "/" do run Resource::Main.new end
   map "/product" do run Resource::Product.new end
 }
 
