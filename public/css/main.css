@@ -1,0 +1,127 @@
+html {
+  background: #FFF; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+body {
+    color: #666;
+    background: transparent;
+    font: 100 14px/1.5 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    width: 960px; }
+
+body p {
+    margin: 15px 0; }
+body a {
+    outline: none;
+    text-decoration: none;
+    color: #000; }
+body a:hover {
+    color: #e016c1; }
+body img {
+    background: #111; }
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal; }
+li {
+    list-style: none; }
+input, textarea {
+    color: #000;
+    background: #FFF; }
+
+#container {
+    margin: 0 auto; }
+
+/* Header */
+#header {
+    padding: 60px 0 30px 0;
+    border-bottom: 1px solid #222; }
+#header h1 {
+    width: 332px;
+    font: 18px/1 "FF DIN", Helvetica, Arial, sans-serif; }
+#header h1 a {
+    display: block;
+    height: 32px;
+    font: 32px/1 "FF DIN", Helvetica, Arial, sans-serif;
+    /*text-indent: -9000px;*/}
+
+#nav ul {
+    position: absolute;
+    top: 70px;
+    right: 0; }
+#nav ul li {
+    padding: 0 0 0 22px;
+    float: left;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font: 12px/1 "FF DIN", Helvetica, Arial, sans-serif;
+    color: #444; }
+#nav ul li a {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px; }
+#nav ul li:first-child {
+    padding: 0 12px 0 28px; }
+#nav ul li:not(:first-child) {
+    padding: 0 12px 0 28px;
+    background: url(/images/nav_divide.png) left no-repeat; }
+#nav ul li.active, #nav ul li:hover {
+    color: #9a7e95; }
+#nav ul li.active a, #nav ul li:hover a {
+    color: #e016c1; }
+
+/* Content */
+#content {
+    margin: 30px auto 30px auto;
+    width: 960px; }
+
+#content h1 {
+    font: 30px/1 "FF DIN", Helvetica, Arial, sans-serif;
+    color: #e016c1;}
+
+/* Footer */
+#footer {
+    border-top: 1px solid #222;
+    height: 40px;
+    padding-top: 20px;
+    width: 960px; }
+
+#footer p {
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font: 12px/1 "FF DIN", Helvetica, Arial, sans-serif;
+    color: #333; }
+
+#footer p a {
+  color: #333; }
+#footer p a:hover {
+  color: #e016c1; }
+#footer #credit {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    color: #555; }
+#footer #contact {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    color: #555; }
+
+/* After */
+#header, #footer, #section {
+  position: relative; }
+
+#header, #footer, #content, #nav {
+  display: block; }
+
+#header:after, #footer:after, #content:after, #nav:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden; }
