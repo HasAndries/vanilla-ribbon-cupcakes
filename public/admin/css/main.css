@@ -1,5 +1,5 @@
 html {
-  background: #FFFFFF; }
+  background: #a7bfb9; }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
   margin: 0;
@@ -10,8 +10,7 @@ body {
     background: transparent;
     font: 100 14px/1.5 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0 auto;
-    padding-bottom: 60px;
-    width: 960px; }
+    padding-bottom: 60px; }
 
 body p {
     margin: 15px 0; }
@@ -43,18 +42,21 @@ input, textarea {
 
 /* Header */
 #header {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc)); /* webkit */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a7bfb9), color-stop(100%,#ffffff)); /* webkit */
+    -webkit-box-shadow: 0 5px 5px #888;
     padding: 20px 10px; }
+#header #content {
+    margin: 0 auto;
+    width: 960px;}
 #header h1 {
-    width: 160px; }
+    width: 100px; }
 #header h1 a {
-    background: url(/images/logo1.png) left no-repeat;
     display: block;
-    height: 161px; }
+    height: 40px; }
 
 #nav ul {
     position: absolute;
-    top: 120px;
+    top: 20px;
     right: 0; }
 #nav ul li {
     padding: 0 0 0 22px;
@@ -79,44 +81,47 @@ input, textarea {
 #nav ul li.active a, #nav ul li:hover a {
     color: #42849d; }
 
-/* Content */
-#content {
-    border-bottom: 3px solid #4F2912;
-    border-top: 3px solid #4F2912;
-    background: #cfcfcf;
-    padding: 30px 10px
-
+/* Main */
+#main {
+    background: #fff;
 }
 
-#content h1 {
+#main #content {
+    margin: 0 auto;
+    padding: 10px 10px;
+    min-height: 500px;
+    width: 960px;
+}
+
+#main h1 {
     font: 30px/1 "FF DIN", Helvetica, Arial, sans-serif;
     color: #f392b0;}
 
 /* Footer */
 #footer {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cccccc), color-stop(100%,#eeeeee)); /* webkit */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#a7bfb9)); /* webkit */
+    -webkit-box-shadow: 0 -5px 5px #888;
     height: 40px;
     padding: 20px 10px; }
+#footer #content {
+    margin: 0 auto;
+    width: 960px;
+}
 
 #footer p {
     color: #4F2912;
     font: 12px/1 "FF DIN", Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
     text-transform: uppercase;}
-
 #footer p a {
   color: #333; }
 #footer p a:hover {
   color: #f392b0; }
 #footer #credit {
-    position: absolute;
-    top: 30px;
-    left: 10px;
+    float: left;
     color: #555; }
 #footer #contact {
-    position: absolute;
-    top: 30px;
-    right: 10px;
+    float: right;
     color: #555; }
 
 /* After */

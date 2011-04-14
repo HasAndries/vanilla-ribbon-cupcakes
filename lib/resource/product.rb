@@ -5,7 +5,7 @@ require './lib/dio/product'
 
 module Resource
   class Product < Sinatra::Base
-    get '/?' do
+    get '/product/?' do
       {
           :items => PRODUCTS.get_all
       }.to_json
