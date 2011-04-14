@@ -2,26 +2,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
     <head>
         <title>Vanilla Ribbon</title>
-        <link type="text/css" href="../css/main.css" rel="stylesheet" />
+        <link type="text/css" href="css/main.css" rel="stylesheet" />
         <script type="text/javascript" src="../js/jquery-1.5.2.js"></script>
         <script type="text/javascript" src="../js/main.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
     </head>
     <body>
         <div id="container">
             <div id="header"></div>
+
             <div id="content">
-                <form action="/admin/login" method="post" >
-                    <div>
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username" />
-                    </div>
-                    <div>
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" />
-                    </div>
-                    <input type="submit" value="Login" />
-                </form>
+                <div>
+                    Username
+                    <input type="text" id="username" />
+                </div>
+                <div>
+                    Password
+                    <input type="password" id="password" />
+                </div>
+                <input type="submit" id="loginButton" value="Login" />
             </div>
+
             <div id="footer"></div>
         </div>
     </body>

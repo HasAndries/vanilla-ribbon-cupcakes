@@ -1,33 +1,33 @@
 require 'sinatra/base'
 require 'rack'
+require './lib/generate'
 
 module Sinatra
   module Auth
+    
+    class Auther
+      public
+      def new_token_id() Generate.random 24 end
+      def authenticate(token_id, params) {:token_id => token_id, :username => params[:username], :expire_time => (Time.now+(14*24*60*60)).utc} end
+      def create_token(token_id, token) tokens[token_id] = token end
+      def get_token(token_id) tokens[token_id] end
+      def token_expired?(token) Time.now.utc > token[:expire_time] end
+      def destroy_token(token_id) tokens.delete token_id end
+      private
+      def tokens; (@@tokens ||= {}) end
+    end
+    
     module Helpers
-      def securityEnabled?
-        options.respond_to?('securityEnabled') ? options.securityEnabled : true
+      def securityEnabled?() options.respond_to?('securityEnabled') ? options.securityEnabled : true end
+      def meta; (class << self; self; end); end
+
+      def auther; options.auther end
+      
+      def tokens; meta.class_variable_get :@@tokens end
+      def token_id()
+        session[:token] || env["HTTP_TOKEN"] || params[:token] || auther.new_token_id
       end
-
-      def token_id
-        session[:token_id] || env["HTTP_TOKEN"] || Auth::new_token_id
-      end
-
-      def token
-        tokens[token_id]
-      end
-
-      def login!
-        token = custom_auth::authenticate(token_id)
-        error 404, 'Invalid username or password' unless token
-
-        if expired?
-          forget
-          session[:token_id] = custom_auth::new_token_id
-          remember token
-        end
-
-        Auth::get_response(token_id, token)
-      end
+      def token() tokens[token_id] end
 
       def authorize!
         return unless securityEnabled?
@@ -35,46 +35,55 @@ module Sinatra
       end
 
       def authorized?
-        !recall.nil?
+        authorized = !recall.nil?
+        #puts "Authorized? (#{token_id}) - #{authorized}"
+        authorized
       end
 
+      def login!
+        session[:token] = token_id
+        
+        #puts "Login! (#{token_id})"
+        forget! if expired?
+        tokens[token_id] = auther.authenticate(token_id, params)
+        session[:token] = token_id
+        #puts "Token (#{token_id}) - #{tokens[token_id]}"
+        error 404, 'Invalid username or password' unless tokens[token_id]
+
+        token
+      end
+      
       def logout!
+        #puts "Logout! (#{token_id})"
         authorize!
-        forget
+        forget!
       end
-
-      def meta; (class << self; self; end); end
-      def tokens; meta.class_variable_get :@@tokens end
-      def custom_auth; options.auth end
 
       protected
-
-      def remember(token)
-        tokens[token_id] = recall unless tokens[token_id]
-        tokens[token_id] = custom_auth::create_token(token_id, token) if tokens[token_id].nil? || expired?
-        session[:token_id] = token_id
-      end
-
-      def forget
-        unless tokens[token_id].nil?
-          custom_auth::destroy_token(token_id)
-          tokens[token_id] = nil
-        end
-      end
-
       def recall
-        tokens[token_id] = custom_auth::get_token(token_id) if tokens[token_id].nil?
+        #puts "Recall (#{token_id})"
+        tokens[token_id] = auther.get_token(token_id) if tokens[token_id].nil?
         expire! if expired?
         tokens[token_id]
       end
 
       def expired?
-        !tokens[token_id].nil? && custom_auth::token_expired?(tokens[token_id])
+        expired = !tokens[token_id].nil? && auther.token_expired?(tokens[token_id])
+        #puts "Expired? (#{token_id}) - #{expired}"
+        expired
       end
 
       def expire!
-        tokens[token_id] = nil
+        #puts "Expire! (#{token_id})"
+        forget!
         error 403, 'Token Expired'
+      end
+      def forget!
+        #puts "Forget! (#{token_id})"
+        if tokens.has_key? token_id
+          auther.destroy_token(token_id)
+          tokens.delete token_id
+        end
       end
     end
 
@@ -82,7 +91,7 @@ module Sinatra
 
     def self.registered(app)
       app.enable :sessions
-      app.set :auth, Auth
+      app.set :auther, Auther.new
       app.class_variable_set :@@tokens, Hash.new
       app.helpers Auth::Helpers
     end

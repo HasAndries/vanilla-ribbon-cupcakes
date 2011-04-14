@@ -1,6 +1,11 @@
 require 'sinatra/base'
+#require './lib/sinatra/base'
+require './lib/redis_auther'
 require './lib/resource/admin'
 require './lib/resource/product'
+
+Sinatra::Base.register Sinatra::Auth
+Sinatra::Base.set :auther, RedisAuther.new
 
 module Resource
   class Main < Sinatra::Base
