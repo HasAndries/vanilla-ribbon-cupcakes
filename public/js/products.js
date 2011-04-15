@@ -1,7 +1,7 @@
 $(document).ready(function(){
     layout();
     
-    loadProducts();
+    //loadProducts();
 });
 
 function loadProducts(){

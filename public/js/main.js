@@ -1,9 +1,18 @@
 //--------------------Layout---------------------------
 function layout(){
-    //header
     $("#header").load("parts/header.html");
-    //footer
     $('#footer').load('parts/footer.html');
+    $('#news').load('parts/news.html');
+
+    loadNews();
+}
+
+//--------------------News-----------------------------
+function loadNews(){
+    
+}
+function loadNewsComplete(){
+
 }
 
 //--------------------Service Calls--------------------

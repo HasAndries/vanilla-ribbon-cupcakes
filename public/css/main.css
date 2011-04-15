@@ -1,28 +1,40 @@
-/*------------------------------Base------------------------------*/
+/*==============================Colors============================*/
+/*
 
+feb7cb - light pink
+ff9a9e - dark pink
+e58a8d - darker pink
+
+a6bfb9 - light blue
+535f5d - dark blue
+3c4543 - darker blue
+
+*/
+/*==============================Base==============================*/
 html {
-  background: #535f5d; }
+  background: #535f5d;
+}
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
   margin: 0;
   padding: 0; }
 
 body {
-    color: #8c5a59;
+    color: #535f5d;
     background: transparent;
     font: 14px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-smoothing: antialiased;
     margin: 0 auto; }
 
-body a {
+a {
+    color: #535f5d;
     outline: none;
     text-decoration: none;
-    color: #8c5a59; }
-body a:hover {
-    color: #dab85f; }
+    text-shadow: 0px 1px 0px #3c4543; }
+a:hover {
+    color: #feb7cb;
+    text-shadow: 0px 1px 1px #e58a8d;}
 
-h1, h2, h3, h4, h5, h6 {
-    font-size: 100%;
-    font-weight: normal; }
 li {
     list-style: none; }
 input, textarea {
@@ -34,35 +46,18 @@ input, textarea {
     height: 4px;
     margin: 0 auto;
     width: 960px;}
-
-/*------------------------------Containers------------------------*/
-
 #container {
     margin: 0 auto; }
+.content {
+    margin: 0 auto;
+    width: 960px;
+}
 
+/*==============================Header============================*/
 #header {
     background: url(/images/headerbg.png) repeat-x;
     height: 200px; }
-#header #content {
-    margin: 0 auto;
-    width: 960px; }
-
-#main {
-    background: #a6bfb9; }
-#main #content {
-    margin: 0 auto;
-    min-height: 400px;
-    width: 960px; }
-
-#footer {
-    background: url(/images/footerbg.png) repeat-x;
-    height: 100px; }
-#footer #content {
-    margin: 0 auto;
-    width:960px; }
-
-/*------------------------------Header----------------------------*/
-
+/*------------------------------Logo------------------------------*/
 #header #logo {
     float: left;
     margin: 10px 0 0 10px;
@@ -73,66 +68,96 @@ input, textarea {
     height: 197px;
     text-indent: -9000px;}
 
-#notice {
-    background: #8c5a59;
-    box-shadow: 3px 3px 4px #000;
-    color: #fff;
-    float: right;
-    font: 20px "FF DIN", Helvetica, Arial, sans-serif;
-    margin: 10px 10px 0 0;
-    padding: 20px 30px 20px 30px; }
-
+/*------------------------------Nav-------------------------------*/
 #nav {
-    /*background: #000;*/
+    float: right; }
+
+/*------------------------------Notice----------------------------*/
+#notice {
+    margin: 0 5px; }
+#notice #content {
+    background: #535f5d;
+    box-shadow: 3px 3px 4px #3c4543;
+    margin: 0 0 0 200px;
+    padding: 20px 30px;
+}
+#notice a {
+    color: #fff;
+    font: 20px Helvetica, Arial, sans-serif;
+    margin: 0 auto;}
+#notice a.active, #notice a:hover {
+    text-decoration: underline;
+    text-shadow: none;}
+
+/*------------------------------Menu------------------------------*/
+#menu {
     float: right;
     height: 40px;
-    margin: 155px 10px 0 0; }
-#nav ul li {
-    color: #8c5a59;
+    margin: 90px 10px 0 0; }
+#menu ul li {
+    color: #535f5d;
     float: left;
-    font: 20px "FF DIN", Helvetica, Arial, sans-serif;
+    font: 26px Helvetica, Arial, sans-serif;
     padding: 0 0 0 6px;
     text-transform: uppercase;
     letter-spacing: 1px; }
-#nav ul li a {
+#menu ul li a {
     margin-bottom: 5px;
-    font-size: 14px; }
-#nav ul li:not(:last-child) {
+    font: bold 26px Helvetica, Arial, sans-serif; }
+#menu ul li:not(:last-child) {
     padding-right: 6px;
 }
-#nav ul li:not(:last-child):after {
+#menu ul li:not(:last-child):after {
     content: "|";
     padding-left: 12px;
     width: 1px;}
-#nav ul li:last-child {
+#menu ul li:last-child {
     padding: 0 6px 0 6px;
     content: ""; }
-#nav ul li.active, #nav ul li:hover {
-    color: #dab85f; }
-#nav ul li.active a, #nav ul li:hover a {
-    color: #dab85f; }
 
-/*------------------------------Main------------------------------*/
+/*==============================Main==============================*/
+#main {
+    background: #a6bfb9; }
+#main .content {
+    min-height: 400px;}
 
-#main h1 {
-    font: 30px/1 "FF DIN", Helvetica, Arial, sans-serif;
-    color: #8c5a59;}
+/*------------------------------Body------------------------------*/
+#body {
+    background: url(/images/vector.png) left bottom no-repeat;
+    margin: 20px 10px;
+    min-height: 500px; }
 
-/*------------------------------Footer----------------------------*/
+/*------------------------------News------------------------------*/
+#news {
+    color: #fff;
+    float: right;
+    margin: 5px 5px; }
+#news #content {
+    background: #535f5d;
+    box-shadow: 3px 3px 4px #3c4543;
+    margin: 0 0 0 700px;
+    min-height: 300px;
+    padding: 10px 10px;
+}
+#news h1 {
+    font-weight: bold;
+    margin: 2px 0;
+    text-decoration: underline; }
+#news h2 {
+    margin: 10px 0 0 0; }
+
+/*==============================Footer============================*/
+#footer {
+    background: url(/images/footerbg.png) repeat-x;
+    height: 100px; }
+
 #footer h1 {
     font: 12px "FF DIN", Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
     text-transform: uppercase;}
-#footer h1 a{
-    color: #8c5a59; }
-#footer h1 a:hover {
-  color: #dab85f; }
-
-#footer #credit{
+#footer .credit{
     float: left;
-    margin: 10px 0 0 10px;
-}
-#footer #contact{
+    margin: 10px 0 0 10px; }
+#footer .contact{
     float: right;
-    margin: 10px 10px 0 0;
-}
+    margin: 10px 10px 0 0; }
