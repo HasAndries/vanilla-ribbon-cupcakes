@@ -1,13 +1,18 @@
-/*==============================Colors============================*/
-/*
+/*==============================Colors============================
 
 feb7cb - light pink
-ff9a9e - dark pink
-e58a8d - darker pink
+ff9a9e - pink
+e58a8d - dark pink
 
 a6bfb9 - light blue
-535f5d - dark blue
-3c4543 - darker blue
+535f5d - blue
+3c4543 - dark blue
+
+a16085 - light purple
+875170 - purple
+6e425b - dark purple
+
+faebbc - yellow
 
 */
 /*==============================Base==============================*/
@@ -91,9 +96,9 @@ input, textarea {
 
 /*------------------------------Menu------------------------------*/
 #menu {
-    float: right;
+    float:right;
     height: 40px;
-    margin: 90px 10px 0 0; }
+    margin: 165px 10px 0 0; }
 #menu ul li {
     color: #535f5d;
     float: left;
@@ -115,38 +120,60 @@ input, textarea {
     padding: 0 6px 0 6px;
     content: ""; }
 
+/*------------------------------News------------------------------*/
+#news {
+    background: #a6bfb9;
+    color: #fff;
+    font: 26px Helvetica, Arial, sans-serif;
+    padding: 0 0 5px 0;}
+#scroller
+{
+    width:960px;
+    position: relative;}
+
+#scroller div.scrollableArea *
+{
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;}
+#scroller .text{
+    width: 970px;
+}
+
+/*==============================ColorBand=========================*/
+#band {
+    background: #a6bfb9;
+    padding: 10px 0;}
+#band .content{
+    background: url(/images/color_band.png) repeat-x;
+    height: 27px;
+    width: 100%;}
+
 /*==============================Main==============================*/
 #main {
-    background: #a6bfb9; }
+    /*background: #a6bfb9;*/
+    background: #a6bfb9 url(/images/vector_mirror.png) right bottom no-repeat;}
 #main .content {
     min-height: 400px;}
 
 /*------------------------------Body------------------------------*/
 #body {
-    background: url(/images/vector.png) left bottom no-repeat;
+    /*background: url(/images/vector_mirror.png) right bottom no-repeat;*/
     margin: 20px 10px;
     min-height: 500px; }
 
-/*------------------------------News------------------------------*/
-#news {
-    color: #fff;
-    float: right;
-    margin: 5px 5px; }
-#news #content {
-    background: #535f5d;
-    box-shadow: 3px 3px 4px #3c4543;
-    margin: 0 0 0 700px;
-    min-height: 300px;
-    padding: 10px 10px;
-}
-#news h1 {
-    font-weight: bold;
-    margin: 2px 0;
-    text-decoration: underline; }
-#news h2 {
-    margin: 10px 0 0 0; }
+/*==============================ColorDots=========================*/
+#dots {
+    background: #a6bfb9;
+    padding: 10px 0;}
+#dots .content{
+    background: url(/images/color_dots.png) repeat-x;
+    height: 13px;
+    width: 100%;}
 
 /*==============================Footer============================*/
+
 #footer {
     background: url(/images/footerbg.png) repeat-x;
     height: 100px; }
