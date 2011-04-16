@@ -82,16 +82,17 @@ input, textarea {
     background: #a6bfb9;
 }
 #menu .content{
-    height: 34px;
+    height: 31px;
     width: 517px;}
 #menu ul {
     margin: 0 auto;}
 #menu ul li {
-    color: #535f5d;
     float: left;
-    font: 26px Helvetica, Arial, sans-serif;
+    font: 24px Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    color: #f2f2f2;
+    text-shadow: 0px -1px 0px #757575;}
 #menu ul li a {
     font: bold 16px Helvetica, Arial, sans-serif; }
 #menu ul li:not(:last-child) {
@@ -99,8 +100,7 @@ input, textarea {
 }
 #menu ul li:not(:last-child):after {
     content: "|";
-    padding-left: 12px;
-    width: 1px;}
+    padding-left: 12px;}
 #menu ul li:last-child {
     padding: 0 6px 0 6px;
     content: ""; }
