@@ -153,6 +153,7 @@ input, textarea {
 /*==============================Main==============================*/
 #main {
     /*background: #a6bfb9;*/
+    
     background: #a6bfb9 url(/images/vector_mirror.png) right bottom no-repeat;}
 #main .content {
     min-height: 400px;}
