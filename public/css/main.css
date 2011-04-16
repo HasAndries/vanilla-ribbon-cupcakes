@@ -79,7 +79,7 @@ input, textarea {
 /*------------------------------Menu------------------------------*/
 #menu {
     /*background: #a6bfb9;*/
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(90%,#F3CBCC), color-stop(100%,#A6BFB9));
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(90%,#562d46), color-stop(100%,#A6BFB9));
 }
 #menu .content{
     height: 40px;
@@ -116,11 +116,18 @@ input, textarea {
     height: 27px;
     width: 100%;}
 
+/*==============================ColorBand=========================*/
+#vector {
+    background: transparent;
+    float: right;
+    margin: -30px 5px 0 0;
+    }
+
 /*==============================Main==============================*/
 #main {
-    /*background: #a6bfb9;*/
-    
-    background: #a6bfb9 url(/images/vector_mirror.png) right bottom no-repeat;}
+    background: #a6bfb9;
+    /*background: #a6bfb9 url(/images/vector_mirror.png) right bottom no-repeat;*/
+    }
 #main .content {
     min-height: 400px;}
 
@@ -128,7 +135,7 @@ input, textarea {
 #body {
     /*background: url(/images/vector_mirror.png) right bottom no-repeat;*/
     padding: 10px 10px;
-    min-height: 400px; }
+    min-height: 450px; }
 
 /*==============================ColorDots=========================*/
 #dots {
