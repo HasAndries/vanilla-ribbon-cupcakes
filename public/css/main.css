@@ -120,7 +120,8 @@ input, textarea {
 #vector {
     background: transparent;
     float: right;
-    margin: -30px 5px 0 0;
+    margin: -20px 0 0 0;
+    -webkit-transform: rotate(-35deg);
     }
 
 /*==============================Main==============================*/
