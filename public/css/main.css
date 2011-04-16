@@ -36,10 +36,10 @@ body {
     margin: 0 auto; }
 
 a {
-    color: #fff;
+    color: #dcdcdc;
     outline: none;
     text-decoration: none;
-    text-shadow: 0px -1px 0px #505050; }
+    text-shadow: 0px -1px 0px #757575; }
 a:hover {
     color: #feb7cb;
     text-shadow: 0px 1px 1px #e58a8d;}
@@ -50,11 +50,13 @@ input, textarea {
     color: #8c5a59;
     background: #FFF; }
 
-.devider {
-    background: url(/images/devider.png);
-    height: 4px;
+.divider {
+    background: #a6bfb9 url(/images/devider.png) center no-repeat ;
+    height: 9px;
     margin: 0 auto;
-    width: 960px;}
+    padding: 5px 0 0 0;
+    width: 100%;}
+
 #container {
     margin: 0 auto; }
 .content {
@@ -78,8 +80,7 @@ input, textarea {
 
 /*------------------------------Menu------------------------------*/
 #menu {
-    /*background: #a6bfb9;*/
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(90%,#562d46), color-stop(100%,#A6BFB9));
+    background: #a6bfb9;
 }
 #menu .content{
     height: 40px;
@@ -120,33 +121,20 @@ input, textarea {
 #vector {
     background: transparent;
     float: right;
-    margin: -20px 0 0 0;
-    -webkit-transform: rotate(-35deg);
-    -moz-transform: rotate(-35deg);
+    margin: -10px 0 0 0;
     }
 
 /*==============================Main==============================*/
 #main {
     background: #a6bfb9;
-    /*background: #a6bfb9 url(/images/vector_mirror.png) right bottom no-repeat;*/
     }
 #main .content {
     min-height: 400px;}
 
 /*------------------------------Body------------------------------*/
 #body {
-    /*background: url(/images/vector_mirror.png) right bottom no-repeat;*/
     padding: 10px 10px;
     min-height: 450px; }
-
-/*==============================ColorDots=========================*/
-#dots {
-    background: #a6bfb9;
-    padding: 10px 0;}
-#dots .content{
-    background: url(/images/color_dots.png) repeat-x;
-    height: 13px;
-    width: 100%;}
 
 /*==============================Footer============================*/
 
@@ -164,3 +152,11 @@ input, textarea {
 #footer .contact{
     float: right;
     margin: 10px 10px 0 0; }
+
+/*------------------------------ColorDots-------------------------*/
+#dots {
+    background: url(/images/color_dots.png) repeat-x;
+    float:left;
+    height: 13px;
+    margin: 10px 0;
+    width: 100%;}
