@@ -54,7 +54,6 @@ input, textarea {
     background: #a6bfb9 url(/images/devider.png) center no-repeat ;
     height: 9px;
     margin: 0 auto;
-    padding: 5px 0 0 0;
     width: 100%;}
 
 #container {
@@ -83,8 +82,7 @@ input, textarea {
     background: #a6bfb9;
 }
 #menu .content{
-    height: 40px;
-    padding: 5px 0 0 0;
+    height: 34px;
     width: 517px;}
 #menu ul {
     margin: 0 auto;}
@@ -92,11 +90,9 @@ input, textarea {
     color: #535f5d;
     float: left;
     font: 26px Helvetica, Arial, sans-serif;
-    padding: 0 0 0 6px;
     text-transform: uppercase;
     letter-spacing: 1px; }
 #menu ul li a {
-    margin-bottom: 5px;
     font: bold 16px Helvetica, Arial, sans-serif; }
 #menu ul li:not(:last-child) {
     padding-right: 6px;
@@ -115,6 +111,7 @@ input, textarea {
 #band .content{
     background: url(/images/color_band.png) repeat-x;
     height: 27px;
+    padding: 0 0 20px 0;
     width: 100%;}
 
 /*==============================ColorBand=========================*/
