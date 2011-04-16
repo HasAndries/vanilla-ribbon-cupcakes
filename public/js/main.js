@@ -1,6 +1,7 @@
 //--------------------Layout---------------------------
 function layout(){
     $("#header").load("parts/header.html");
+    $("#menu").load("parts/menu.html");
     $('#footer').load("parts/footer.html");
 
     //loadNews();
