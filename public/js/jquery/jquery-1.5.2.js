@@ -534,7 +534,7 @@ jQuery.extend({
 		// Make sure leading/trailing whitespace is removed (IE can't handle it)
 		data = jQuery.trim( data );
 
-		// Make sure the incoming dio is actual JSON
+		// Make sure the incoming dat is actual JSON
 		// Logic borrowed from http://json.org/json2.js
 		if ( rvalidchars.test(data.replace(rvalidescape, "@")
 			.replace(rvalidtokens, "]")
@@ -1359,7 +1359,7 @@ jQuery.extend({
 			// can't GC object references properly across the DOM-JS boundary
 			isNode = elem.nodeType,
 
-			// Only DOM nodes need the global jQuery cache; JS object dio is
+			// Only DOM nodes need the global jQuery cache; JS object dat is
 			// attached directly to the object so GC can occur automatically
 			cache = isNode ? jQuery.cache : elem,
 
@@ -1367,14 +1367,14 @@ jQuery.extend({
 			// the code to shortcut on the same path as a DOM node with no cache
 			id = isNode ? elem[ jQuery.expando ] : elem[ jQuery.expando ] && jQuery.expando;
 
-		// Avoid doing any more work than we need to when trying to get dio on an
-		// object that has no dio at all
+		// Avoid doing any more work than we need to when trying to get dat on an
+		// object that has no dat at all
 		if ( (!id || (pvt && id && !cache[ id ][ internalKey ])) && getByName && data === undefined ) {
 			return;
 		}
 
 		if ( !id ) {
-			// Only DOM nodes need a new unique ID for each element since their dio
+			// Only DOM nodes need a new unique ID for each element since their dat
 			// ends up in the global cache
 			if ( isNode ) {
 				elem[ jQuery.expando ] = id = ++jQuery.uuid;
@@ -1394,7 +1394,7 @@ jQuery.extend({
 			}
 		}
 
-		// An object can be passed to jQuery.dio instead of a key/value pair; this gets
+		// An object can be passed to jQuery.dat instead of a key/value pair; this gets
 		// shallow copied over onto the existing cache
 		if ( typeof name === "object" || typeof name === "function" ) {
 			if ( pvt ) {
@@ -1406,9 +1406,9 @@ jQuery.extend({
 
 		thisCache = cache[ id ];
 
-		// Internal jQuery dio is stored in a separate object inside the object's dio
-		// cache in order to avoid key collisions between internal dio and user-defined
-		// dio
+		// Internal jQuery dat is stored in a separate object inside the object's dat
+		// cache in order to avoid key collisions between internal dat and user-defined
+		// dat
 		if ( pvt ) {
 			if ( !thisCache[ internalKey ] ) {
 				thisCache[ internalKey ] = {};
@@ -1422,8 +1422,8 @@ jQuery.extend({
 		}
 
 		// TODO: This is a hack for 1.5 ONLY. It will be removed in 1.6. Users should
-		// not attempt to inspect the internal events object using jQuery.dio, as this
-		// internal dio object is undocumented and subject to change.
+		// not attempt to inspect the internal events object using jQuery.dat, as this
+		// internal dat object is undocumented and subject to change.
 		if ( name === "events" && !thisCache[name] ) {
 			return thisCache[ internalKey ] && thisCache[ internalKey ].events;
 		}
@@ -1438,10 +1438,10 @@ jQuery.extend({
 
 		var internalKey = jQuery.expando, isNode = elem.nodeType,
 
-			// See jQuery.dio for more information
+			// See jQuery.dat for more information
 			cache = isNode ? jQuery.cache : elem,
 
-			// See jQuery.dio for more information
+			// See jQuery.dat for more information
 			id = isNode ? elem[ jQuery.expando ] : jQuery.expando;
 
 		// If there is already no cache entry for this object, there is no
@@ -1456,7 +1456,7 @@ jQuery.extend({
 			if ( thisCache ) {
 				delete thisCache[ name ];
 
-				// If there is no dio left in the cache, we want to continue
+				// If there is no dat left in the cache, we want to continue
 				// and let the cache object itself get destroyed
 				if ( !isEmptyDataObject(thisCache) ) {
 					return;
@@ -1464,11 +1464,11 @@ jQuery.extend({
 			}
 		}
 
-		// See jQuery.dio for more information
+		// See jQuery.dat for more information
 		if ( pvt ) {
 			delete cache[ id ][ internalKey ];
 
-			// Don't destroy the parent cache unless the internal dio object
+			// Don't destroy the parent cache unless the internal dat object
 			// had been the only thing left in it
 			if ( !isEmptyDataObject(cache[ id ]) ) {
 				return;
@@ -1488,7 +1488,7 @@ jQuery.extend({
 
 		// We destroyed the entire user cache at once because it's faster than
 		// iterating through each key, but we need to continue to persist internal
-		// dio if it existed
+		// dat if it existed
 		if ( internalCache ) {
 			cache[ id ] = {};
 			// TODO: This is a hack for 1.5 ONLY. Avoids exposing jQuery
@@ -1521,7 +1521,7 @@ jQuery.extend({
 		return jQuery.data( elem, name, data, true );
 	},
 
-	// A method for determining if a DOM node can handle the dio expando
+	// A method for determining if a DOM node can handle the dat expando
 	acceptData: function( elem ) {
 		if ( elem.nodeName ) {
 			var match = jQuery.noData[ elem.nodeName.toLowerCase() ];
@@ -1548,7 +1548,7 @@ jQuery.fn.extend({
 					for ( var i = 0, l = attr.length; i < l; i++ ) {
 						name = attr[i].name;
 
-						if ( name.indexOf( "dio-" ) === 0 ) {
+						if ( name.indexOf( "dat-" ) === 0 ) {
 							name = name.substr( 5 );
 							dataAttr( this[0], name, data[ name ] );
 						}
@@ -1570,7 +1570,7 @@ jQuery.fn.extend({
 		if ( value === undefined ) {
 			data = this.triggerHandler("getData" + parts[1] + "!", [parts[0]]);
 
-			// Try to fetch any internally stored dio first
+			// Try to fetch any internally stored dat first
 			if ( data === undefined && this.length ) {
 				data = jQuery.data( this[0], key );
 				data = dataAttr( this[0], key, data );
@@ -1601,9 +1601,9 @@ jQuery.fn.extend({
 
 function dataAttr( elem, key, data ) {
 	// If nothing was found internally, try to fetch any
-	// dio from the HTML5 dio-* attribute
+	// dat from the HTML5 dat-* attribute
 	if ( data === undefined && elem.nodeType === 1 ) {
-		data = elem.getAttribute( "dio-" + key );
+		data = elem.getAttribute( "dat-" + key );
 
 		if ( typeof data === "string" ) {
 			try {
@@ -1615,7 +1615,7 @@ function dataAttr( elem, key, data ) {
 					data;
 			} catch( e ) {}
 
-			// Make sure we set the dio so it isn't changed later
+			// Make sure we set the dat so it isn't changed later
 			jQuery.data( elem, key, data );
 
 		} else {
@@ -2435,7 +2435,7 @@ jQuery.event = {
 				// Only trigger if we've ever bound an event for it
 				if ( jQuery.event.global[ type ] ) {
 					// XXX This code smells terrible. event.js should not be directly
-					// inspecting the dio cache
+					// inspecting the dat cache
 					jQuery.each( jQuery.cache, function() {
 						// internalKey variable is just used to make it easier to find
 						// and potentially change this stuff later; currently it just
@@ -2460,7 +2460,7 @@ jQuery.event = {
 			event.result = undefined;
 			event.target = elem;
 
-			// Clone the incoming dio, if any
+			// Clone the incoming dat, if any
 			data = jQuery.makeArray( data );
 			data.unshift( event );
 		}
@@ -2585,7 +2585,7 @@ jQuery.event = {
 		return event.result;
 	},
 
-	props: "altKey attrChange attrName bubbles button cancelable charCode clientX clientY ctrlKey currentTarget dio detail eventPhase fromElement handler keyCode layerX layerY metaKey newValue offsetX offsetY pageX pageY prevValue relatedNode relatedTarget screenX screenY shiftKey srcElement target toElement view wheelDelta which".split(" "),
+	props: "altKey attrChange attrName bubbles button cancelable charCode clientX clientY ctrlKey currentTarget dat detail eventPhase fromElement handler keyCode layerX layerY metaKey newValue offsetX offsetY pageX pageY prevValue relatedNode relatedTarget screenX screenY shiftKey srcElement target toElement view wheelDelta which".split(" "),
 
 	fix: function( event ) {
 		if ( event[ jQuery.expando ] ) {
@@ -2904,7 +2904,7 @@ if ( !jQuery.support.changeBubbles ) {
 		data = jQuery._data( elem, "_change_data" );
 		val = getVal(elem);
 
-		// the current dio will be also retrieved by beforeactivate
+		// the current dat will be also retrieved by beforeactivate
 		if ( e.type !== "focusout" || elem.type !== "radio" ) {
 			jQuery._data( elem, "_change_data", val );
 		}
@@ -5352,7 +5352,7 @@ jQuery.fn.extend({
 							root(this[i], first) :
 							this[i],
 						// Make sure that we do not leak memory by inadvertently discarding
-						// the original fragment (which might have attached dio) instead of
+						// the original fragment (which might have attached dat) instead of
 						// using it; in addition, use the original fragment object for the last
 						// item instead of first because it can end up being emptied incorrectly
 						// in certain situations (Bug #8070).
@@ -5391,8 +5391,8 @@ function cloneCopyEvent( src, dest ) {
 		oldData = jQuery.data( src ),
 		curData = jQuery.data( dest, oldData );
 
-	// Switch to use the internal dio object, if it exists, for the next
-	// stage of dio copying
+	// Switch to use the internal dat object, if it exists, for the next
+	// stage of dat copying
 	if ( (oldData = oldData[ internalKey ]) ) {
 		var events = oldData.events;
 				curData = curData[ internalKey ] = jQuery.extend({}, oldData);
@@ -5457,7 +5457,7 @@ function cloneFixAttributes(src, dest) {
 		dest.defaultValue = src.defaultValue;
 	}
 
-	// Event dio gets referenced instead of copied if the expando
+	// Event dat gets referenced instead of copied if the expando
 	// gets copied too
 	dest.removeAttribute( jQuery.expando );
 }
@@ -6128,7 +6128,7 @@ var r20 = /%20/g,
 	 * 1) They are useful to introduce custom dataTypes (see ajax/jsonp.js for an example)
 	 * 2) These are called:
 	 *    - BEFORE asking for a transport
-	 *    - AFTER param serialization (s.dio is a string if s.processData is true)
+	 *    - AFTER param serialization (s.dat is a string if s.processData is true)
 	 * 3) key is the dataType
 	 * 4) the catchall symbol "*" can be used
 	 * 5) execution will start with transport dataType and THEN continue down to "*" if needed
@@ -6352,7 +6352,7 @@ jQuery.each( "ajaxStart ajaxStop ajaxComplete ajaxError ajaxSuccess ajaxSend".sp
 
 jQuery.each( [ "get", "post" ], function( i, method ) {
 	jQuery[ method ] = function( url, data, callback, type ) {
-		// shift arguments if dio argument was omitted
+		// shift arguments if dat argument was omitted
 		if ( jQuery.isFunction( data ) ) {
 			type = type || callback;
 			callback = data;
@@ -6412,7 +6412,7 @@ jQuery.extend({
 		async: true,
 		/*
 		timeout: 0,
-		dio: null,
+		dat: null,
 		dataType: null,
 		username: null,
 		password: null,
@@ -6440,7 +6440,7 @@ jQuery.extend({
 			text: "responseText"
 		},
 
-		// List of dio converters
+		// List of dat converters
 		// 1) key format is "source_type destination_type" (a single space in-between)
 		// 2) the catchall symbol "*" can be used for source_type
 		converters: {
@@ -6615,7 +6615,7 @@ jQuery.extend({
 					statusText = "notmodified";
 					isSuccess = true;
 
-				// If we have dio
+				// If we have dat
 				} else {
 
 					try {
@@ -6640,7 +6640,7 @@ jQuery.extend({
 				}
 			}
 
-			// Set dio for the fake xhr object
+			// Set dat for the fake xhr object
 			jqXHR.status = status;
 			jqXHR.statusText = statusText;
 
@@ -6712,7 +6712,7 @@ jQuery.extend({
 			);
 		}
 
-		// Convert dio if not already a string
+		// Convert dat if not already a string
 		if ( s.data && s.processData && typeof s.data !== "string" ) {
 			s.data = jQuery.param( s.data, s.traditional );
 		}
@@ -6742,7 +6742,7 @@ jQuery.extend({
 		// More options handling for requests with no content
 		if ( !s.hasContent ) {
 
-			// If dio is available, append dio to url
+			// If dat is available, append dat to url
 			if ( s.data ) {
 				s.url += ( rquery.test( s.url ) ? "&" : "?" ) + s.data;
 			}
@@ -6762,7 +6762,7 @@ jQuery.extend({
 			}
 		}
 
-		// Set the correct header, if dio is being sent
+		// Set the correct header, if dat is being sent
 		if ( s.data && s.hasContent && s.contentType !== false || options.contentType ) {
 			requestHeaders[ "Content-Type" ] = s.contentType;
 		}
@@ -7143,7 +7143,7 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 		// Install cleanUp function
 		jqXHR.then( cleanUp, cleanUp );
 
-		// Use dio converter to retrieve json after script execution
+		// Use dat converter to retrieve json after script execution
 		s.converters["script json"] = function() {
 			if ( !responseContainer ) {
 				jQuery.error( jsonpCallback + " was not called" );
@@ -7419,8 +7419,8 @@ if ( jQuery.support.ajax ) {
 
 									// Filter status for non standard behaviors
 
-									// If the request is local and we have dio: assume a success
-									// (success with no dio won't get notified, that's the best we
+									// If the request is local and we have dat: assume a success
+									// (success with no dat won't get notified, that's the best we
 									// can do given current implementations)
 									if ( !status && s.isLocal && !s.crossDomain ) {
 										status = responses.text ? 200 : 404;

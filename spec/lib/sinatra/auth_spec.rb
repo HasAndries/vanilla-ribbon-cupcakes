@@ -1,22 +1,21 @@
 require 'rack/mock'
-require 'sinatra/base'
 
-require_relative '../spec_helper'
+require_relative '../../spec_helper'
 require './lib/sinatra/auth'
 
-def auther
-  (@@auther = Sinatra::Auth::Auther.new)
+def author
+  (@@author = Sinatra::Auth::Auther.new)
 end
 
 describe Sinatra::Auth::Auther, "#new_token_id" do
   it "should generate a new token id" do
-    s = auther.new_token_id
-    s.should_not == auther.new_token_id
+    s = author.new_token_id
+    s.should_not == author.new_token_id
   end
 end
 describe Sinatra::Auth::Auther, "#authenticate" do
   it "should provide a token for the given params" do
-    token = auther.authenticate 'abcd', {:username => 'admin'}
+    token = author.authenticate 'abcd', {:username => 'admin'}
     token[:token_id].should == 'abcd'
     token[:username].should == 'admin'
     token.has_key?(:expire_time).should == true
@@ -24,16 +23,16 @@ describe Sinatra::Auth::Auther, "#authenticate" do
 end
 describe Sinatra::Auth::Auther, "#create_token" do
   it "should create a token for the given params" do
-    token = auther.create_token 'abcd', {:token_id => 'abcd', :username => 'admin', :expire_time => (Time.now+(14*24*60*60)).utc}
+    token = author.create_token 'abcd', {:token_id => 'abcd', :username => 'admin', :expire_time => (Time.now+(14*24*60*60)).utc}
     token[:token_id].should == 'abcd'
     token[:username].should == 'admin'
     token.has_key?(:expire_time).should == true
-    auther.send(:tokens).has_key?('abcd').should == true
+    author.send(:tokens).has_key?('abcd').should == true
   end
 end
 describe Sinatra::Auth::Auther, "#get_token" do
   it "should get an already created token for the given params" do
-    token = auther.get_token 'abcd'
+    token = author.get_token 'abcd'
     token[:token_id].should == 'abcd'
     token[:username].should == 'admin'
     token.has_key?(:expire_time).should == true
@@ -41,23 +40,23 @@ describe Sinatra::Auth::Auther, "#get_token" do
 end
 describe Sinatra::Auth::Auther, "#token_expired?" do
   it "should determine if a token has expired" do
-    auther.token_expired?(auther.send(:tokens)['abcd']).should == false
-    auther.create_token 'abcd', {:token_id => 'abcd', :username => 'admin', :expire_time => (Time.now-1).utc}
-    auther.token_expired?(auther.send(:tokens)['abcd']).should == true
+    author.token_expired?(author.send(:tokens)['abcd']).should == false
+    author.create_token 'abcd', {:token_id => 'abcd', :username => 'admin', :expire_time => (Time.now-1).utc}
+    author.token_expired?(author.send(:tokens)['abcd']).should == true
   end
 end
 describe Sinatra::Auth::Auther, "#destroy_token" do
   it "should destroy an already created token for the given params" do
-    auther.destroy_token 'abcd'
-    auther.send(:tokens).has_key?('abcd').should == false
+    author.destroy_token 'abcd'
+    author.send(:tokens).has_key?('abcd').should == false
   end
 end
 
 class AuthTest < Sinatra::Base
   register Sinatra::Auth
 
-  get '/open' do 'data' end
-  get '/closed' do authorize!; 'data' end
+  get '/open' do 'dat' end
+  get '/closed' do authorize!; 'dat' end
   post '/login' do login! end
   post '/logout' do logout! end
 end

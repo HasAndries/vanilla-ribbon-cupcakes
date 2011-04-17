@@ -18,9 +18,8 @@ def make_task(name, docs = false, path = 'spec')
 end
 
 make_task(:test)
-make_task(:lib,     false,  'spec/lib')
-make_task(:api,     false,  'spec/api')
-make_task(:api_doc, true,   'spec/api')
+make_task(:lib,     false, 'spec/lib')
+make_task(:app,     false, 'spec/app')
 make_task(:doc,     true)
 
 task :default => [:test]

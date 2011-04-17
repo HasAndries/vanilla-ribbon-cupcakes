@@ -4,7 +4,7 @@ require 'simplecov'
 SimpleCov.start do
   coverage_dir 'public/coverage'
 
-  add_filter '/config/'
+  add_filter '/settings/'
   add_filter '/dump/'
   add_filter '/public/'
   add_filter '/spec/'

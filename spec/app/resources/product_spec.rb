@@ -1,7 +1,7 @@
 require 'rack/mock'
 
-require_relative '../spec_helper'
-require './lib/resource/product'
+require_relative '../../spec_helper'
+require './app/resources/product'
 
 describe Resource::Product, "product/?" do
 
