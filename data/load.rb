@@ -1,4 +1,4 @@
-require './lib/settings'
+require './app/settings'
 require 'redis'
 
 REDIS ||= Redis.connect(Settings.db)
