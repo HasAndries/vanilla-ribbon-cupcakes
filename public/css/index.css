@@ -13,24 +13,28 @@
     width: 200px;
 }
 .block a{
+    color: #f2f2f2;
     position: absolute;
-    font: bold 32px Helvetica, Arial, sans-serif;
+    font: 28px Helvetica, Arial, sans-serif;
     margin: 85px auto;
     text-align: center;
+    text-shadow: none;
     width: 200px;
 }
 .block a:hover{
-    font: bold 42px Helvetica, Arial, sans-serif;
-    margin: 78px auto;
+    color: #f2f2f2;
+    font: 42px Helvetica, Arial, sans-serif;
+    margin: 75px auto;
+    text-shadow: none;
 }
 
 #logo{
-    margin:0 107px;
+    margin:0 127px;
     position: absolute;
-    top: 170px;
+    top: 190px;
 }
 #logo img{
-    width: 740px;
+    width: 700px;
 }
 
 #vector {
