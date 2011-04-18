@@ -1,5 +1,5 @@
 .content {
-    margin: 50px auto;
+    margin: 20px auto;
 }
 
 .block_row {
@@ -15,9 +15,17 @@
 #logo{
     margin:0 36px;
     position: absolute;
-    top: 200px;
+    top: 170px;
 }
-
 #logo img{
     width: 880px;
+}
+
+#vector {
+    right: 160px;
+    position: absolute;
+    top: 0;
+}
+#vector img{
+    width: 467px;
 }

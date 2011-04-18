@@ -1,7 +1,7 @@
 $(document).ready(function(){
     init();
 
-    setInterval(move_blocks, 2000);
+    setInterval(move_blocks, 3000);
 });
 
 function move_blocks(){
@@ -18,8 +18,8 @@ function move_blocks(){
         from_element[0].attributes[2].value = to_element[0].attributes[2].value;
         to_element[0].attributes[2].value = tmp;
 
-        from_element.animate({opacity:1}, 1000);
-        to_element.animate({opacity:1}, 1000);
+        from_element.animate({opacity:1}, 2000);
+        to_element.animate({opacity:1}, 2000);
     });
     
 
