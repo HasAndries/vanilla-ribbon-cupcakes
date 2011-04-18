@@ -1,36 +1,43 @@
 .content {
-    margin: 20px auto;
+    margin: 40px auto;
 }
 
 .block_row {
-    height: 240px;
-    width: 960px;
+    height: 200px;
+    padding: 0 80px;
+    width: 800px;
 }
 .block {
     float: left;
-    height: 240px;
-    width: 240px;
+    height: 200px;
+    width: 200px;
 }
 .block a{
     position: absolute;
     font: bold 32px Helvetica, Arial, sans-serif;
-    margin: 100px 55px;
+    margin: 85px auto;
+    text-align: center;
+    width: 200px;
+}
+.block a:hover{
+    font: bold 42px Helvetica, Arial, sans-serif;
+    margin: 78px auto;
 }
 
 #logo{
-    margin:0 36px;
+    margin:0 107px;
     position: absolute;
     top: 170px;
 }
 #logo img{
-    width: 880px;
+    width: 740px;
 }
 
 #vector {
-    margin-left:800px;
+    margin-left:720px;
     position: absolute;
-    top: 0;
+    top: 10px;
 }
 #vector img{
-    width: 467px;
+    width: 340px;
 }
