@@ -1,0 +1,23 @@
+.content {
+    margin: 50px auto;
+}
+
+.block_row {
+    height: 240px;
+    width: 960px;
+}
+.block {
+    float: left;
+    height: 240px;
+    width: 240px;
+}
+
+#logo{
+    margin:0 36px;
+    position: absolute;
+    top: 200px;
+}
+
+#logo img{
+    width: 880px;
+}

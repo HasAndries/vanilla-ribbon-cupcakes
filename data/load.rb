@@ -1,7 +1,7 @@
 require './app/settings'
 require 'redis'
 
-REDIS ||= Redis.connect(Settings.db)
+REDIS ||= Redis.connect(Settings.database)
 
 def load_user(username, password)
   REDIS.hmset "user:#{username}", :password, password

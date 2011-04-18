@@ -8,7 +8,7 @@ require "rspec/core/version"
 def make_task(name, docs = false, path = 'spec')
   options = ["-c", "-r ./spec/spec_helper.rb"]
   options << "-f progress" if !docs
-  options << "-f NiceFormatter" << "-o public/test_results.htm" << "-r ./spec/nice_formatter.rb" if docs
+  options << "-f NiceFormatter" << "-o docs/test_results.htm" << "-r ./spec/nice_formatter.rb" if docs
   pattern = "#{path}/**/*_spec.rb"
   
   RSpec::Core::RakeTask.new(name) do |t|

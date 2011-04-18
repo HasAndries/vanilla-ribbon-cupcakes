@@ -1,33 +1,10 @@
-//--------------------Layout---------------------------
-function layout(){
-    $("#header").load("parts/header.html");
-    $("#menu").load("parts/menu.html");
-    $('#footer').load("parts/footer.html");
-
-    //loadNews();
+//--------------------Init----------------------
+function init(){
+    
 }
 
-//--------------------News-----------------------------
-function loadNews(){
-//    $("#scroller").live("smoothDivScroll", ({
-//        autoScroll: "onstart",
-//        autoScrollDirection: "endlessloopright",
-//        autoScrollInterval: 1,
-//        autoScrollStep: 1
-//    }));
-    $("#news").load("parts/news.html", function(){
-        var scroller = $("#scroller");
-        var news = $("#news");
-        $("#scroller").smoothDivScroll({
-            autoScroll: "onstart",
-            autoScrollDirection: "endlessloopright",
-            autoScrollInterval: 1,
-            autoScrollStep: 1
-        });
-    });
+//--------------------Common--------------------
+function show_error(error){
+    $("#common_error")[0].innerText = error;
+    error.length > 0 ? $("#login_error").fadeIn("slow") : $("#common_error").fadeOut("slow");
 }
-function loadNewsComplete(){
-
-}
-
-//--------------------Service Calls--------------------

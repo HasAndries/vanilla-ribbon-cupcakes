@@ -1,27 +1,9 @@
 /*==============================Colors============================
 
-ffd6d7 - light pink
-f3cbcc - pink
-d9b6b7 - dark pink
-
-a6bfb9 - light blue
-535f5d - blue
-3c4543 - dark blue
-
-a16085 - light purple
-875170 - purple
-6e425b - dark purple
-
-faedf8 - light white
-e1d6df - white
-c7bdc5 - dark white
-
-faebbc - yellow
-
 */
 /*==============================Base==============================*/
 html {
-  background: #535f5d;
+  background: #ffffff;
 }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
@@ -29,7 +11,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
   padding: 0; }
 
 body {
-    color: #535f5d;
+    color: #8c5a59;
     background: transparent;
     font: 14px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-smoothing: antialiased;
@@ -64,95 +46,7 @@ input, textarea {
 }
 
 /*==============================Header============================*/
-#header {
-    background: url(/images/headerbg.png) repeat-x;
-    height: 200px; }
-/*------------------------------Logo------------------------------*/
-#header #logo {
-    margin: 0 auto;
-    width: 203px;}
-#header #logo a {
-    background: url(/images/logo2.png) no-repeat;
-    display: block;
-    height: 197px;
-    text-indent: -9000px;}
 
-/*------------------------------Menu------------------------------*/
-#menu {
-    background: #a6bfb9;
-}
-#menu .content{
-    height: 31px;
-    width: 517px;}
-#menu ul {
-    margin: 0 auto;}
-#menu ul li {
-    float: left;
-    font: 24px Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #f2f2f2;}
-#menu ul li a {
-    font: bold 16px Helvetica, Arial, sans-serif; }
-#menu ul li:not(:last-child) {
-    padding-right: 6px;
-}
-#menu ul li:not(:last-child):after {
-    content: "|";
-    padding-left: 12px;}
-#menu ul li:last-child {
-    padding: 0 6px 0 6px;
-    content: ""; }
-
-/*==============================ColorBand=========================*/
-#band {
-    background: #a6bfb9;}
-#band .content{
-    background: url(/images/color_band.png) repeat-x;
-    height: 27px;
-    padding: 0 0 20px 0;
-    width: 100%;}
-
-/*==============================ColorBand=========================*/
-#vector {
-    background: transparent;
-    float: right;
-    margin: -10px 0 0 0;
-    }
-
-/*==============================Main==============================*/
-#main {
-    background: #a6bfb9;
-    }
-#main .content {
-    min-height: 400px;}
-
-/*------------------------------Body------------------------------*/
-#body {
-    padding: 10px 10px;
-    min-height: 450px; }
+/*==============================Main============================*/
 
 /*==============================Footer============================*/
-
-#footer {
-    background: url(/images/footerbg.png) repeat-x;
-    height: 100px; }
-
-#footer h1 {
-    font: 12px "FF DIN", Helvetica, Arial, sans-serif;
-    letter-spacing: 1px;
-    text-transform: uppercase;}
-#footer .credit{
-    float: left;
-    margin: 10px 0 0 10px; }
-#footer .contact{
-    float: right;
-    margin: 10px 10px 0 0; }
-
-/*------------------------------ColorDots-------------------------*/
-#dots {
-    background: url(/images/color_dots.png) repeat-x;
-    float:left;
-    height: 13px;
-    margin: 10px 0;
-    width: 100%;}

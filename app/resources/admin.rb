@@ -15,7 +15,7 @@ module Resource
       erb :'admin/index', {:layout => :'admin/layout'}
     end
 
-    %w[login settings].each do |path|
+    %w[login products settings].each do |path|
       get "/admin/#{path}/?" do
         @name = path
         erb :"admin/#{path}", {:layout => :'admin/layout'}

@@ -2,7 +2,7 @@ $LOAD_PATH.unshift File.expand_path(File.join(File.dirname(__FILE__), ".."))
 #=========================CODE COVERAGE========================
 require 'simplecov'
 SimpleCov.start do
-  coverage_dir 'public/coverage'
+  coverage_dir 'docs/coverage'
 
   add_filter '/settings/'
   add_filter '/dump/'
