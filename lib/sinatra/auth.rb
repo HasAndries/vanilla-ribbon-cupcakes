@@ -42,12 +42,10 @@ module Sinatra
 
         if author.authenticate(token_id, params)
           token = author.get_token(token_id)
-          p token
           unless token && !token.empty?
             author.create_token(token_id, params)
             token = author.get_token(token_id)
           end
-          p token
           tokens[token_id] = token
           forget! if expired?
         end

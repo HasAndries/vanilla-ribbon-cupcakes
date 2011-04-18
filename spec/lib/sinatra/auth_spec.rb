@@ -4,24 +4,21 @@ require_relative '../../spec_helper'
 require './lib/sinatra/auth'
 
 def author
-  (@@author = Sinatra::Auth::Auther.new)
+  (@@author = Sinatra::Auth::Author.new)
 end
 
-describe Sinatra::Auth::Auther, "#new_token_id" do
+describe Sinatra::Auth::Author, "#new_token_id" do
   it "should generate a new token id" do
     s = author.new_token_id
     s.should_not == author.new_token_id
   end
 end
-describe Sinatra::Auth::Auther, "#authenticate" do
+describe Sinatra::Auth::Author, "#authenticate" do
   it "should provide a token for the given params" do
-    token = author.authenticate 'abcd', {:username => 'admin'}
-    token[:token_id].should == 'abcd'
-    token[:username].should == 'admin'
-    token.has_key?(:expire_time).should == true
+    author.authenticate('abcd', {:username => 'admin'}).should == true
   end
 end
-describe Sinatra::Auth::Auther, "#create_token" do
+describe Sinatra::Auth::Author, "#create_token" do
   it "should create a token for the given params" do
     token = author.create_token 'abcd', {:token_id => 'abcd', :username => 'admin', :expire_time => (Time.now+(14*24*60*60)).utc}
     token[:token_id].should == 'abcd'
@@ -30,7 +27,7 @@ describe Sinatra::Auth::Auther, "#create_token" do
     author.send(:tokens).has_key?('abcd').should == true
   end
 end
-describe Sinatra::Auth::Auther, "#get_token" do
+describe Sinatra::Auth::Author, "#get_token" do
   it "should get an already created token for the given params" do
     token = author.get_token 'abcd'
     token[:token_id].should == 'abcd'
@@ -38,14 +35,14 @@ describe Sinatra::Auth::Auther, "#get_token" do
     token.has_key?(:expire_time).should == true
   end
 end
-describe Sinatra::Auth::Auther, "#token_expired?" do
+describe Sinatra::Auth::Author, "#token_expired?" do
   it "should determine if a token has expired" do
     author.token_expired?(author.send(:tokens)['abcd']).should == false
     author.create_token 'abcd', {:token_id => 'abcd', :username => 'admin', :expire_time => (Time.now-1).utc}
     author.token_expired?(author.send(:tokens)['abcd']).should == true
   end
 end
-describe Sinatra::Auth::Auther, "#destroy_token" do
+describe Sinatra::Auth::Author, "#destroy_token" do
   it "should destroy an already created token for the given params" do
     author.destroy_token 'abcd'
     author.send(:tokens).has_key?('abcd').should == false
