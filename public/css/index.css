@@ -11,6 +11,11 @@
     height: 240px;
     width: 240px;
 }
+.block a{
+    position: absolute;
+    font: bold 32px Helvetica, Arial, sans-serif;
+    margin: 100px 55px;
+}
 
 #logo{
     margin:0 36px;
