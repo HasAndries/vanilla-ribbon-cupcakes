@@ -66,6 +66,7 @@ input, textarea {
     right: 220px;
     top: 20px;
     -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
 }
 #twirl img{
     width: 300px;
