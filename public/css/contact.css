@@ -1,0 +1,37 @@
+.content {
+    margin: 40px auto;
+}
+
+.block_row {
+    height: 200px;
+    padding: 0 80px;
+    width: 800px;
+}
+.block {
+    float: left;
+    height: 200px;
+    width: 200px;
+}
+.block span {
+    color: #f2f2f2;
+    position: absolute;
+    font: bold 28px Helvetica, Arial, sans-serif;
+    margin: 85px auto;
+    text-align: center;
+    width: 200px;
+}
+.block a{
+    color: #f2f2f2;
+    position: absolute;
+    font: 28px Helvetica, Arial, sans-serif;
+    margin: 85px auto;
+    text-align: center;
+    text-shadow: none;
+    width: 200px;
+}
+.block a:hover{
+    color: #f2f2f2;
+    font: 42px Helvetica, Arial, sans-serif;
+    margin: 75px auto;
+    text-shadow: none;
+}

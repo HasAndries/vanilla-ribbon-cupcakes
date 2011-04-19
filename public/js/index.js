@@ -21,6 +21,4 @@ function move_blocks(){
         from_element.animate({opacity:1}, 700);
         to_element.animate({opacity:1}, 700);
     });
-    
-
 }

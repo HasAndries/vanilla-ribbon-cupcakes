@@ -61,16 +61,6 @@ input, textarea {
     top: 0;
     width: 264px;
 }
-#twirl{
-    position: absolute;
-    right: 226px;
-    top: 20px;
-    -webkit-transform: rotate(20deg);
-    -moz-transform: rotate(20deg);
-}
-#twirl img{
-    width: 300px;
-}
 
 /*==============================Header============================*/
 
