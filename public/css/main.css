@@ -3,7 +3,8 @@
 */
 /*==============================Base==============================*/
 html {
-    background: #e8e1e5;
+    /*background: #e8e1e5;*/
+    background: #fff;
 }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
@@ -43,6 +44,22 @@ input, textarea {
 .content {
     margin: 0 auto;
     width: 960px;
+}
+#background_left{
+    background: url(/images/bg_left.png) repeat-y;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 264px;
+}
+#background_right{
+    background: url(/images/bg_right.png) repeat-y;
+    height: 100%;
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 264px;
 }
 
 /*==============================Header============================*/
