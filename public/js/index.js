@@ -16,6 +16,6 @@ function move_blocks(){
     var from_color = from_element[0].style.backgroundColor;
     var to_color = to_element[0].style.backgroundColor;
 
-    from_element.animate({backgroundColor: to_color}, 900);
-    to_element.animate({backgroundColor: from_color}, 900);
+    from_element.animate({backgroundColor: to_color}, 700);
+    to_element.animate({backgroundColor: from_color}, 700);
 }
