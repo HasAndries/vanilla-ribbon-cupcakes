@@ -20,18 +20,21 @@
     text-align: center;
     width: 200px;
 }
+#block_10 {
+    width:400px;
+}
 .block a{
     color: #f2f2f2;
     position: absolute;
     font: 28px Helvetica, Arial, sans-serif;
-    margin: 85px auto;
+    margin: 100px auto;
     text-align: center;
     text-shadow: none;
     width: 200px;
 }
 .block a:hover{
     color: #f2f2f2;
-    font: 42px Helvetica, Arial, sans-serif;
-    margin: 75px auto;
+    font: 32px Helvetica, Arial, sans-serif;
+    margin: 97px auto;
     text-shadow: none;
 }
