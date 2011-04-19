@@ -4,7 +4,6 @@
 
 .block_row {
     height: 200px;
-    padding: 0 80px;
     width: 800px;
 }
 .block {
@@ -35,4 +34,10 @@
 }
 #logo img{
     width: 620px;
+}
+
+#main .content {
+    width: 800px;
+    box-shadow: 0 0 15px #222;
+    border-radius: 40px;
 }

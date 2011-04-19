@@ -33,33 +33,9 @@ input, textarea {
     color: #8c5a59;
     background: #FFF; }
 
-.divider {
-    background: #a6bfb9 url(/images/devider.png) center no-repeat ;
-    height: 9px;
-    margin: 0 auto;
-    width: 100%;}
-
-#container {
-    margin: 0 auto; }
 .content {
     margin: 0 auto;
     width: 960px;
-}
-#background_left{
-    background: url(/images/bg_left.png) repeat-y;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 264px;
-}
-#background_right{
-    background: url(/images/bg_right.png) repeat-y;
-    height: 100%;
-    right: 0;
-    position: absolute;
-    top: 0;
-    width: 264px;
 }
 
 /*==============================Header============================*/
