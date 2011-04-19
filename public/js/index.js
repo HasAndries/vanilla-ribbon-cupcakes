@@ -12,13 +12,10 @@ function move_blocks(){
 
     var from_element = $('#'+blocks[from].id);
     var to_element = $('#'+blocks[to].id);
-    from_element.animate({opacity:0.5}, 300);
-    to_element.animate({opacity:0.5}, 300, function(){
-        var tmp = from_element[0].attributes[2].value;
-        from_element[0].attributes[2].value = to_element[0].attributes[2].value;
-        to_element[0].attributes[2].value = tmp;
+    
+    var from_color = from_element[0].style.backgroundColor;
+    var to_color = to_element[0].style.backgroundColor;
 
-        from_element.animate({opacity:1}, 700);
-        to_element.animate({opacity:1}, 700);
-    });
+    from_element.animate({backgroundColor: to_color}, 1000);
+    to_element.animate({backgroundColor: from_color}, 1000);
 }
