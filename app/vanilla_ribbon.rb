@@ -15,7 +15,7 @@ class VanillaRibbon < Sinatra::Base
     erb :index
   end
 
-  %w[gallery specials contact about].each do |path|
+  %w[specials menu contact about].each do |path|
       get "/#{path}/?" do
         @name = path
         erb path.to_sym

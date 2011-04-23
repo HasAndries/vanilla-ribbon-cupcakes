@@ -1,40 +1,28 @@
-.content {
-    margin: 40px auto;
+#nav_contact a{
+    background: url(/images/ribbon_orange.png) no-repeat;
 }
 
-.block_row {
-    height: 200px;
-    padding: 0 80px;
-    width: 800px;
+#main h1{
+    font-weight: bold;
+    padding-bottom: 20px;
 }
-.block {
+
+.form_field{
+    margin: 0 auto;
+    width: 960px;
+}
+
+label{
     float: left;
-    height: 200px;
+    padding-right: 10px;
+    text-align: right;
     width: 200px;
 }
-.block span {
-    color: #f2f2f2;
-    position: absolute;
-    font: bold 28px Helvetica, Arial, sans-serif;
-    margin: 85px auto;
-    text-align: center;
-    width: 200px;
+textarea{
+    height: 150px;
+    width: 400px;
 }
-#block_10 {
-    width:400px;
-}
-.block a{
-    color: #f2f2f2;
-    position: absolute;
-    font: 28px Helvetica, Arial, sans-serif;
-    margin: 100px auto;
-    text-align: center;
-    text-shadow: none;
-    width: 200px;
-}
-.block a:hover{
-    color: #f2f2f2;
-    font: 32px Helvetica, Arial, sans-serif;
-    margin: 97px auto;
-    text-shadow: none;
+
+#send{
+    margin-left: 210px;
 }

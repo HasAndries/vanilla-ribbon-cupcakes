@@ -1,0 +1,8 @@
+#nav_about a{
+    background: url(/images/ribbon_orange.png) no-repeat;
+}
+
+#main h1{
+    font-weight: bold;
+    padding-bottom: 20px;
+}

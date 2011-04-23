@@ -1,0 +1,133 @@
+/*==============================Colors============================
+
+78685f - light brown
+
+feb7cb - pink
+
+b07f8d - white
+
+ede3ca - cream
+b0a794 - dark cream
+ecd8e3 - light cream
+
+*/
+/*==============================Base==============================*/
+html {
+    background: #fcfaea;
+    height: 100%;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0; }
+
+body {
+    color: #453C37;
+    background: transparent;
+    font-smoothing: antialiased;
+    height: 100%;
+    margin: 0 auto; }
+
+a {
+    color: #85C2BC;
+    outline: none;
+    text-decoration: none; }
+a:hover {
+    color: #feb7cb;}
+
+li {
+    list-style: none; }
+
+select, input, textarea {
+    color: #453C37;
+    background: #f5efdf;
+    border: 1px solid #e6dcd1;
+    border-radius: 5px;
+    padding: 4px 10px
+}
+input[type=button]:hover, input[type=submit]:hover{
+    background: #f5d580;
+    border: 1px solid #e6b177;
+}
+
+#container{
+    height: auto;
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+}
+.content {
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
+}
+
+/*==============================Header============================*/
+#header{
+    background: url(/images/bg-turq.jpg);
+    padding-bottom: 64px;
+}
+#logo {
+
+}
+#logo a{
+    background: url(/images/logo.png);
+    display: block;
+    height: 120px;
+    width: 312px;
+    text-indent: -9999px;
+    z-index: 100;
+}
+#header ul{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#header li{
+    display: inline;
+    float: left;
+    height: 140px;
+}
+#header li a{
+    color: #453C37;
+    display: block;
+    padding-bottom: 54px;
+    padding-top: 60px;
+    text-shadow: 0 -1px 0 #0a0908;
+    text-align: center;
+    width: 130px;
+}
+#header li a:hover{
+    color: #fff;
+    text-shadow: 0 1px 0 #aaaaaa;
+}
+
+/*==============================Main============================*/
+
+#paper_top{
+    background: url(/images/bg-paper-top.png) repeat-x;
+    height: 64px;
+    margin-top: -64px;
+}
+
+#main {
+    background: #fcfaea;
+}
+
+#paper_bottom{
+    background: url(/images/bg-paper-bottom.png) repeat-x;
+    height: 64px;
+}
+
+/*==============================Footer============================*/
+
+#footer{
+    background: url(/images/bg-turq.jpg);
+    bottom: 0;
+    height: 177px;
+    /*margin-top: -64px;*/
+    position: absolute;
+    width: 100%;
+    z-index: -10;
+}
