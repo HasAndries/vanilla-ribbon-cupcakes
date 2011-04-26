@@ -1,19 +1,5 @@
-/*==============================Colors============================
-
-78685f - light brown
-
-feb7cb - pink
-
-b07f8d - white
-
-ede3ca - cream
-b0a794 - dark cream
-ecd8e3 - light cream
-
-*/
-/*==============================Base==============================*/
 html {
-    background: #fcfaea;
+    background: hsla(0,0%,92%,.3);
     height: 100%;
 }
 
@@ -61,14 +47,33 @@ input[type=button]:hover, input[type=submit]:hover{
     position: relative;
     width: 960px;
 }
+.border_line{
+    background: #8a858c;
+    box-shadow: 0px 2px 5px #888;
+    height: 1px;
+    position: absolute;
+    width: 100%;
+}
 
 /*==============================Header============================*/
 #header{
-    background: url(/images/bg-turq.jpg);
-    padding-bottom: 64px;
+    padding-top: 30px;
+    position: relative;
+    z-index: 100;
 }
-#logo {
 
+#header .border_line{
+    top:30px;
+}
+
+#menu{
+    background-color:#a39da6;
+    height: 90px;
+}
+
+#logo {
+    position: absolute;
+    top: -30px;
 }
 #logo a{
     background: url(/images/logo.png);
@@ -78,6 +83,7 @@ input[type=button]:hover, input[type=submit]:hover{
     text-indent: -9999px;
     z-index: 100;
 }
+
 #header ul{
     display: block;
     position: absolute;
@@ -87,47 +93,80 @@ input[type=button]:hover, input[type=submit]:hover{
 #header li{
     display: inline;
     float: left;
-    height: 140px;
+    height: 150px;
 }
 #header li a{
     color: #453C37;
     display: block;
-    padding-bottom: 54px;
-    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-top: 34px;
     text-shadow: 0 -1px 0 #0a0908;
     text-align: center;
-    width: 130px;
+    width: 100px;
 }
 #header li a:hover{
     color: #fff;
     text-shadow: 0 1px 0 #aaaaaa;
 }
 
+#nav_line{
+    background: rgb(255, 172, 200);
+    box-shadow: 0px 2px 5px #888;
+    height: 5px;
+    position: absolute;
+    top:120px;
+    width: 100%;
+}
+#nav_marker{
+    border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-bottom: 15px solid rgb(255, 172, 200);
+    height: 0;
+    position: absolute;
+    top:75px;
+    width: 0;
+}
+
 /*==============================Main============================*/
 
-#paper_top{
-    background: url(/images/bg-paper-top.png) repeat-x;
-    height: 64px;
-    margin-top: -64px;
+#main{
+    position:relative;
+    height: 400px;
 }
 
-#main {
-    background: #fcfaea;
+#main .content{
+    background: #ebebeb;
+    border-left: 1px solid #d1d1d1;
+    border-right: 1px solid #d1d1d1;
+    border-bottom: 1px solid #d1d1d1;
+    margin-top: -120px;
+    padding: 125px 10px 10px 10px;
+    width: 940px;
 }
 
-#paper_bottom{
-    background: url(/images/bg-paper-bottom.png) repeat-x;
-    height: 64px;
+#main #footer{
+    background: #a39da6;
+    border: 1px solid #8a858c;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 70px;
+    margin: 0 auto;
+    padding: 20px 10px 10px 10px;
+    position: relative;
+    width: 940px;
 }
 
-/*==============================Footer============================*/
+#footer a{
+    color: #fff;
+}
+#footer a:hover{
+    color: #feb7cb;
+}
 
-#footer{
-    background: url(/images/bg-turq.jpg);
-    bottom: 0;
-    height: 177px;
-    /*margin-top: -64px;*/
-    position: absolute;
-    width: 100%;
-    z-index: -10;
+#footer .left{
+    float: left;
+}
+#footer .right{
+    float: right;
+    text-align: left;
 }
