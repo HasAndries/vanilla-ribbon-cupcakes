@@ -2,7 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
     <head>
         <title>Vanilla Ribbon</title>
-        <link type="text/css" href="/css/main.css" rel="stylesheet" />
+
+        <link type="text/css" href="/css/reset.css" rel="stylesheet" />
+        <link type="text/css" href="/css/taf-seafarer-m.css" rel="stylesheet" />
+        
+        <link type="text/css" href="/css/layout.css" rel="stylesheet" />
         <link type="text/css" href="/css/<%= @name %>.css" rel="stylesheet" />
         <link type="text/css" href="/css/smoothDivScroll.css" rel="stylesheet" />
 
@@ -14,8 +18,37 @@
         <script type="text/javascript" src="/js/<%= @name %>.js"></script>
     </head>
     <body>
-        <div id="header"></div>
-        <div id="main"><%= yield %></div>
-        <div id="footer"></div>
+        <div id="container">
+            <div id="header">
+                <div id="menu">
+                    <div class="border_line"></div>
+                    <div class="content">
+                        <h1 id="logo">
+                            <a href="http://www.vanilla-ribbon.co.za">Vanilla Ribbon</a>
+                        </h1>
+                        <ul>
+                            <li><a href="/"><h2>home</h2></a></li>
+                            <li><a href="/specials"><h2>specials</h2></a></li>
+                            <li><a href="/menu"><h2>menu</h2></a></li>
+                            <li><a href="/contact"><h2>contact</h2></a></li>
+                            <li><a href="/about"><h2>about</h2></a></li>
+                        </ul>
+                        <div id="nav_marker"></div>
+                    </div>
+                    <div id="nav_line"></div>
+                </div>
+            </div>
+            <div id="main">
+                <div class="content"><%= yield %></div>
+                <div id="footer">
+                    <div class="left">&copy2011 VANILLA RIBBON. ALL RIGHTS RESERVED</div>
+                    <div class="right">
+                        email: <a href="mailto:info@vanilla-ribbon.co.za">info@vanilla-ribbon.co.za</a><br>
+                        phone: 021 975 0708<br>
+                        powered by Lime-Liquid
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
