@@ -1,5 +1,15 @@
+/*
+
+78685f - Dark
+b0a794 - Light
+ecd8e3 - Pink
+ede3ca - Yellow
+
+*/
+
 html {
-    background: hsla(0,0%,92%,.3);
+    /*background: hsla(0,0%,92%,.3);*/
+    background: url(/images/bg-damask.jpg);
     height: 100%;
 }
 
@@ -67,7 +77,7 @@ input[type=button]:hover, input[type=submit]:hover{
 }
 
 #menu{
-    background-color:#a39da6;
+    background-color:#78685f;
     height: 90px;
 }
 
@@ -96,13 +106,14 @@ input[type=button]:hover, input[type=submit]:hover{
     height: 150px;
 }
 #header li a{
-    color: #453C37;
+    color: #fff;
     display: block;
-    padding-bottom: 30px;
-    padding-top: 34px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 64px;
     text-shadow: 0 -1px 0 #0a0908;
     text-align: center;
-    width: 100px;
+    width: 90px;
 }
 #header li a:hover{
     color: #fff;
@@ -145,7 +156,7 @@ input[type=button]:hover, input[type=submit]:hover{
 }
 
 #main #footer{
-    background: #a39da6;
+    background: #78685f;
     border: 1px solid #8a858c;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
