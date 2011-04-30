@@ -8,11 +8,12 @@
         
         <link type="text/css" href="/css/layout.css" rel="stylesheet" />
         <link type="text/css" href="/css/<%= @name %>.css" rel="stylesheet" />
-        <link type="text/css" href="/css/smoothDivScroll.css" rel="stylesheet" />
+        <link type="text/css" href="/css/nivo-slider.css" rel="stylesheet" />
 
         <script type="text/javascript" src="/js/jquery/jquery-1.5.2.js"></script>
         <script type="text/javascript" src="/js/jquery/jquery-ui-1.8.11.custom.min.js"></script>
-        <script type="text/javascript" src="/js/jquery/jquery.smoothDivScroll-1.1.js"></script>
+
+        <script type="text/javascript" src="/js/jquery/jquery.nivo.slider.js"></script>
 
         <script type="text/javascript" src="/js/main.js"></script>
         <script type="text/javascript" src="/js/<%= @name %>.js"></script>
@@ -21,31 +22,27 @@
         <div id="container">
             <div id="header">
                 <div id="menu">
-                    <div class="border_line"></div>
-                    <div class="content">
-                        <h1 id="logo">
-                            <a href="http://www.vanilla-ribbon.co.za">Vanilla Ribbon</a>
-                        </h1>
-                        <ul>
-                            <li><a href="/">home</a></li>
-                            <li><a href="/specials">specials</a></li>
-                            <li><a href="/menu">menu</a></li>
-                            <li><a href="/contact">contact</a></li>
-                            <li><a href="/about">about</a></li>
-                        </ul>
-                    </div>
-                    <div id="nav_line"></div>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/gallery">Gallery</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
                 </div>
+                <h1 id="logo">
+                    <a href="http://www.vanilla-ribbon.co.za">Vanilla Ribbon</a>
+                </h1>
             </div>
             <div id="main">
                 <div class="content"><%= yield %></div>
-                <div id="footer">
-                    <div class="left">&copy2011 VANILLA RIBBON. ALL RIGHTS RESERVED</div>
-                    <div class="right">
-                        email: <a href="mailto:info@vanilla-ribbon.co.za">info@vanilla-ribbon.co.za</a><br>
-                        phone: 021 975<span style="display:none;">_</span> 0708<br>
-                        powered by Lime-Liquid
-                    </div>
+            </div>
+            <div id="footer">
+                <div class="left">&copy2011 VANILLA RIBBON. ALL RIGHTS RESERVED</div>
+                <div class="right">
+                    email: <a href="mailto:info@vanilla-ribbon.co.za">info@vanilla-ribbon.co.za</a><br>
+                    phone: 021 975<span style="display:none;">_</span> 0708<br>
+                    powered by Lime-Liquid
                 </div>
             </div>
         </div>

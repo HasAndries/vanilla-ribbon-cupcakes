@@ -8,8 +8,7 @@ ede3ca - Yellow
 */
 
 html {
-    /*background: hsla(0,0%,92%,.3);*/
-    background: url(/images/bg-damask-small.jpg);
+    background: #fff;
     height: 100%;
 }
 
@@ -52,38 +51,61 @@ input[type=button]:hover, input[type=submit]:hover{
     min-height: 100%;
     position: relative;
 }
-.content {
+
+.break{
+    background: url(/images/dots.png) repeat-x;
+    height: 8px;
+    margin: 20px 0 20px -7px;
+    width: 780px;
+}
+
+/*==============================Header============================*/
+
+#header {
+    background: url(/images/bg_stripe.png) left repeat-y;
+    height: 110px;
     margin: 0 auto;
     position: relative;
     width: 960px;
 }
-.border_line{
-    background: #8a858c;
-    box-shadow: 0px 2px 5px #888;
-    height: 1px;
-    position: absolute;
-    width: 100%;
-}
-
-/*==============================Header============================*/
-#header{
-    padding-top: 30px;
-    position: relative;
-    z-index: 100;
-}
-
-#header .border_line{
-    top:30px;
-}
 
 #menu{
-    background-color:#78685f;
-    height: 90px;
+    background-color:#e1e3c7;
+    box-shadow: 2px 2px 5px #888;
+    height: 40px;
+    position: absolute;
+    top: 80px;
+    width: 960px;
 }
+
+#menu ul{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#menu li{
+    display: inline;
+    float: left;
+    height: 150px;
+}
+#menu li a{
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    padding-top: 10px;
+    text-align: center;
+    width: 70px;
+}
+#menu li a:hover{
+    color: #ffacc8;
+}
+
+/*==============================Logo============================*/
 
 #logo {
     position: absolute;
-    top: -30px;
+    top: 70px;
 }
 #logo a{
     background: url(/images/logo.png);
@@ -91,93 +113,42 @@ input[type=button]:hover, input[type=submit]:hover{
     height: 120px;
     width: 312px;
     text-indent: -9999px;
-    z-index: 100;
-}
-
-#header ul{
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-#header li{
-    display: inline;
-    float: left;
-    height: 150px;
-}
-#header li a{
-    color: #fff;
-    display: block;
-    font-size: 18px;
-    font-weight: bold;
-    padding-top: 64px;
-    text-shadow: 0 -1px 0 #0a0908;
-    text-align: center;
-    width: 90px;
-}
-#header li a:hover{
-    color: #ffacc8;
-    text-shadow: 0 1px 0 #322227;
-}
-
-#nav_line{
-    background: rgb(255, 172, 200);
-    box-shadow: 0px 2px 5px #888;
-    height: 5px;
-    position: absolute;
-    top:120px;
-    width: 100%;
-}
-#nav_marker{
-    border-left: 40px solid transparent;
-	border-right: 40px solid transparent;
-	border-bottom: 15px solid rgb(255, 172, 200);
-    height: 0;
-    position: absolute;
-    top:75px;
-    width: 0;
 }
 
 /*==============================Main============================*/
 
 #main{
+    background: url(/images/bg_stripe.png) repeat-y left;
     position:relative;
-    height: 400px;
+    min-height: 400px;
+    margin: 100px auto 10px;
+    position: relative;
+    width: 960px;
 }
 
 #main .content{
-    background: #ebebeb;
-    border-left: 1px solid #d1d1d1;
-    border-right: 1px solid #d1d1d1;
-    border-bottom: 1px solid #d1d1d1;
-    margin-top: -120px;
-    padding: 125px 10px 10px 10px;
-    width: 940px;
+    padding-left: 180px;
+    width: 780px;
 }
 
-#main #footer{
-    background: #78685f;
-    border: 1px solid #8a858c;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    height: 70px;
+/*==============================Footer==========================*/
+#footer{
+    background-color:#e1e3c7;
+    box-shadow: 2px 2px 5px #888;
+    height: 85px;
     margin: 0 auto;
-    padding: 20px 10px 10px 10px;
     position: relative;
-    width: 940px;
-}
-
-#footer a{
-    color: #fff;
-}
-#footer a:hover{
-    color: #feb7cb;
+    width: 960px;
 }
 
 #footer .left{
     float: left;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 #footer .right{
     float: right;
     text-align: left;
+    margin-top: 10px;
+    margin-right: 10px;
 }
