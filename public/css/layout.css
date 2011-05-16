@@ -9,7 +9,6 @@ ede3ca - Yellow
 
 html {
     background: #fff;
-    height: 100%;
 }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
@@ -20,7 +19,6 @@ body {
     color: #453C37;
     background: transparent;
     font-smoothing: antialiased;
-    height: 100%;
     margin: 0 auto; }
 
 a {
@@ -46,109 +44,89 @@ input[type=button]:hover, input[type=submit]:hover{
 }
 
 #container{
-    height: auto;
-    height: 100%;
-    min-height: 100%;
+    margin: 50px auto 0 auto;
     position: relative;
+    width: 960px;
 }
 
 .break{
-    background: url(/images/dots.png) repeat-x;
-    height: 8px;
-    margin: 20px 0 20px -7px;
-    width: 780px;
+    background: url(/images/dots_2.png) repeat-x;
+    height: 16px;
+    margin: 20px 0 20px 2px;
+    width: 770px;
 }
 
-/*==============================Header============================*/
+/*==============================Right=============================*/
 
-#header {
-    background: url(/images/bg_stripe.png) left repeat-y;
-    height: 110px;
-    margin: 0 auto;
-    position: relative;
-    width: 960px;
+#right {
+    background: #f5f5d1 url(/images/rightpanel_bg.png) no-repeat top right;
+    box-shadow: 1px 1px 3px #999;
+    height: 100%;
+    min-height: 650px;
+    position: absolute;
+    right: 0;
 }
 
 #menu{
-    background-color:#e1e3c7;
-    box-shadow: 2px 2px 5px #888;
-    height: 40px;
-    position: absolute;
-    top: 80px;
-    width: 960px;
+    height: 400px;
+    padding-top: 60px;
 }
 
 #menu ul{
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
+    margin: 0 16px;
+    width: 138px;
 }
 #menu li{
-    display: inline;
-    float: left;
-    height: 150px;
+    text-indent: -9999px;
+    height: 65px;
+    margin-top: 14px;
 }
 #menu li a{
-    color: #fff;
     display: block;
     font-size: 16px;
+    height: 55px;
     padding-top: 10px;
     text-align: center;
-    width: 70px;
+    width: 100%;
 }
 #menu li a:hover{
     color: #ffacc8;
 }
 
-/*==============================Logo============================*/
+/*==============================Main============================*/
+
+#main{
+    background-color: #f5f5d1;
+    box-shadow: 1px 1px 3px #999;
+    min-height: 490px;
+    padding-bottom: 110px;
+    position: absolute;
+    width: 771px;
+    z-index: -2;
+}
+
+#main #backdrop{
+    position: absolute;
+    width: 771px;
+    z-index: -1;
+}
+
+#main .content{
+    background: #f5f5d1;
+    float: left;
+    margin-top: 100px;
+    min-height: 440px;
+    width: 100%;
+}
 
 #logo {
     position: absolute;
-    top: 70px;
+    bottom: 0;
 }
 #logo a{
     background: url(/images/logo.png);
     display: block;
-    height: 120px;
-    width: 312px;
+    height: 100px;
+    width: 430px;
     text-indent: -9999px;
-}
-
-/*==============================Main============================*/
-
-#main{
-    background: url(/images/bg_stripe.png) repeat-y left;
-    position:relative;
-    min-height: 400px;
-    margin: 100px auto 10px;
-    position: relative;
-    width: 960px;
-}
-
-#main .content{
-    padding-left: 180px;
-    width: 780px;
-}
-
-/*==============================Footer==========================*/
-#footer{
-    background-color:#e1e3c7;
-    box-shadow: 2px 2px 5px #888;
-    height: 85px;
-    margin: 0 auto;
-    position: relative;
-    width: 960px;
-}
-
-#footer .left{
-    float: left;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-#footer .right{
-    float: right;
-    text-align: left;
-    margin-top: 10px;
-    margin-right: 10px;
 }

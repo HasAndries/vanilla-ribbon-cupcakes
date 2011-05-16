@@ -1,8 +1,53 @@
-#nav_marker{
-   left:570px;
+#top{
+    padding: 30px 20px;
+}
+#pink{
+    background: #f0d1c4;
+    border: 2px solid #f4bfc0;
+    padding: 6px 20px;
+}
+#green{
+    background: #d6e2af;
+    border: 2px solid #cfdda6;
+    margin-top: 1px;
+    padding: 6px 20px;
+}
+#contacts{
+    background: #d08f83;
+    border: 2px solid #bf6160;
+    color: #fff;
+    height: 160px;
+    margin-top: 20px;
+    padding: 6px 20px;
+}
+#contacts h2{
+    padding-top: 10px;
 }
 
-#main h1{
-    font-weight: bold;
-    padding-bottom: 20px;
+#contact_left{
+    float: left;
+    text-align: center;
+}
+
+#contact_right{
+    float: right;
+    text-align: center;
+}
+
+#contact_bottom{
+    border: 2px solid #fff;
+    border-radius: 10px;
+    height: 50px;
+    padding-top: 5px;
+    position: absolute;
+    margin: 90px 175px 0;
+    text-align: center;
+    width: 421px;
+}
+
+#blue{
+    background: #c4e0d4;
+    border: 2px solid #bde5e4;
+    margin-top: 20px;
+    padding: 30px 20px;
 }

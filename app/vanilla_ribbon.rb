@@ -15,6 +15,11 @@ class VanillaRibbon < Sinatra::Base
     erb :index
   end
 
+  get '/gallery/:id' do
+    @name = 'collection'
+    erb :collection
+  end
+
   %w[gallery pricing contact about].each do |path|
       get "/#{path}/?" do
         @name = path

@@ -20,30 +20,25 @@
     </head>
     <body>
         <div id="container">
-            <div id="header">
+            <div id="right">
                 <div id="menu">
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/gallery">Gallery</a></li>
-                        <li><a href="/pricing">Pricing</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                        <li><a href="/about">About</a></li>
+                        <li><a style="background-image:url(/images/menu/home.png)" href="/">Home</a></li>
+                        <li><a style="background-image:url(/images/menu/gallery.png)" href="/gallery">Gallery</a></li>
+                        <li><a style="background-image:url(/images/menu/pricing.png)" href="/pricing">Pricing</a></li>
+                        <li><a style="background-image:url(/images/menu/contact.png)" href="/contact">Contact</a></li>
+                        <li><a style="background-image:url(/images/menu/about.png)" href="/about">About</a></li>
                     </ul>
+                </div>
+            </div>
+            <div id="main">
+                <img id="backdrop" src="/images/main_bg.png" alt="" />
+                <div class="content">
+                    <%= yield %>
                 </div>
                 <h1 id="logo">
                     <a href="http://www.vanilla-ribbon.co.za">Vanilla Ribbon</a>
                 </h1>
-            </div>
-            <div id="main">
-                <div class="content"><%= yield %></div>
-            </div>
-            <div id="footer">
-                <div class="left">&copy2011 VANILLA RIBBON. ALL RIGHTS RESERVED</div>
-                <div class="right">
-                    email: <a href="mailto:info@vanilla-ribbon.co.za">info@vanilla-ribbon.co.za</a><br>
-                    phone: 021 975<span style="display:none;">_</span> 0708<br>
-                    powered by Lime-Liquid
-                </div>
             </div>
         </div>
     </body>
