@@ -1,53 +1,89 @@
 #top{
     padding: 30px 20px;
 }
-#pink{
-    background: #f0d1c4;
-    border: 2px solid #f4bfc0;
-    padding: 6px 20px;
+
+#options{
+    width: 100%;
 }
-#green{
+
+#options span{
+    display: block;
+    margin-left: 20px;
+}
+
+.option_caption{
+    display: block;
+    font-weight: bold;
+    margin: 20px 0 20px 20px;
+}
+
+#options ul{
+    margin-left: 20px;
+}
+#options li{
+    list-style: disc inside;
+}
+
+#option_flavours{
     background: #d6e2af;
     border: 2px solid #cfdda6;
-    margin-top: 1px;
-    padding: 6px 20px;
-}
-#contacts{
-    background: #d08f83;
-    border: 2px solid #bf6160;
-    color: #fff;
-    height: 160px;
-    margin-top: 20px;
-    padding: 6px 20px;
-}
-#contacts h2{
-    padding-top: 10px;
-}
-
-#contact_left{
     float: left;
-    text-align: center;
+    height: 142px;
+    width: 188px;
 }
 
-#contact_right{
-    float: right;
-    text-align: center;
+#option_icing{
+    background: #f0d1c4;
+    border: 2px solid #f4bfc0;
+    float: left;
+    height: 142px;
+    width: 189px;
 }
 
-#contact_bottom{
-    border: 2px solid #fff;
-    border-radius: 10px;
-    height: 50px;
-    padding-top: 5px;
-    position: absolute;
-    margin: 90px 175px 0;
-    text-align: center;
-    width: 421px;
-}
-
-#blue{
+#option_size{
     background: #c4e0d4;
     border: 2px solid #bde5e4;
-    margin-top: 20px;
-    padding: 30px 20px;
+    float: left;
+    height: 142px;
+    width: 189px;
+}
+
+#option_colors{
+    background: #d08f83;
+    border: 2px solid #bf6160;
+    float: left;
+    height: 142px;
+    width: 189px;
+}
+
+#fillings{
+    background: #e4efe7;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    height: 100px;
+    margin: 170px 10px 20px;
+    padding: 20px;
+}
+
+#fillings_caption{
+    float: left;
+}
+
+.filling_column{
+    float: left;
+    width: 200px;
+    margin-left: 80px;
+}
+
+#prices{
+    background: #f1d1c4;
+    border: 8px solid #efbbbc;
+    border-radius: 5px;
+    height: 500px;
+    padding: 10px 20px;
+}
+.prices_column{
+    float: left;
+    width: 200px;
+    margin-left: 20px;
 }

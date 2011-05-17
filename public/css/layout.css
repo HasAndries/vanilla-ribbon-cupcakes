@@ -49,20 +49,13 @@ input[type=button]:hover, input[type=submit]:hover{
     width: 960px;
 }
 
-.break{
-    background: url(/images/dots_2.png) repeat-x;
-    height: 16px;
-    margin: 20px 0 20px 2px;
-    width: 770px;
-}
-
 /*==============================Right=============================*/
 
 #right {
     background: #f5f5d1 url(/images/rightpanel_bg.png) no-repeat top right;
     box-shadow: 1px 1px 3px #999;
     height: 100%;
-    min-height: 650px;
+    min-height: 600px;
     position: absolute;
     right: 0;
 }
@@ -115,7 +108,7 @@ input[type=button]:hover, input[type=submit]:hover{
     background: #f5f5d1;
     float: left;
     margin-top: 100px;
-    min-height: 440px;
+    min-height: 340px;
     width: 100%;
 }
 
