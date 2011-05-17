@@ -101,6 +101,8 @@ input[type=button]:hover, input[type=submit]:hover{
 #main #backdrop{
     position: absolute;
     width: 771px;
+    top: 0;
+    left: 0;
     z-index: -1;
 }
 
