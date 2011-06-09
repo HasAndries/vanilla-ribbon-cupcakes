@@ -1,0 +1,8 @@
+<div class="collection">
+    <h2><%= @gallery.capitalize %></h2>
+    <div id="gallery" class="nivoSlider">
+        <% @images.each do |image|%>
+            <img src="/images/gallery/<%= @gallery %>/<%= image %>" />
+        <% end %>
+    </div>
+</div>

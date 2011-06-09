@@ -16,8 +16,15 @@ class VanillaRibbon < Sinatra::Base
   end
 
   get '/gallery/:id' do
-    @name = 'collection'
-    erb :collection
+    @name = 'gallery_full'
+    @gallery = params[:id]
+    @dir = File.join(File.dirname(__FILE__), "../public/images/gallery/#{@gallery}")
+    @images = []
+    Dir.new(@dir).each do |filename|
+      @images << filename unless filename =~ /\w*_thumb./ || filename.length < 5
+    end
+    @images.sort!
+    erb :gallery_full
   end
 
   %w[gallery pricing contact about].each do |path|
