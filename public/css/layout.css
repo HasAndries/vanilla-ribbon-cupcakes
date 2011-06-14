@@ -110,13 +110,14 @@ input[type=button]:hover, input[type=submit]:hover{
     background: #f5f5d1;
     float: left;
     margin-top: 100px;
+    margin-bottom: 40px;
     min-height: 340px;
     width: 100%;
 }
 
 #logo {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
 }
 #logo a{
     background: url(/images/logo.png);
