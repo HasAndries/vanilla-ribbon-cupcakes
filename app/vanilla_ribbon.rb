@@ -11,6 +11,7 @@ class VanillaRibbon < Sinatra::Base
   use Resource::Update
 
   get '/?' do
+    @title = ''
     @name = 'index'
     erb :index
   end
@@ -18,6 +19,7 @@ class VanillaRibbon < Sinatra::Base
   get '/gallery/:id' do
     @name = 'gallery_full'
     @gallery = params[:id]
+    @title = " - Gallery - #{@gallery.capitalize}"
     @dir = File.join(File.dirname(__FILE__), "../public/images/gallery/#{@gallery}")
     @images = []
     Dir.new(@dir).each do |filename|
@@ -30,6 +32,7 @@ class VanillaRibbon < Sinatra::Base
   %w[gallery pricing contact about].each do |path|
       get "/#{path}/?" do
         @name = path
+        @title = " - #{path.capitalize}"
         erb path.to_sym
       end
     end
