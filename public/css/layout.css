@@ -126,3 +126,12 @@ input[type=button]:hover, input[type=submit]:hover{
     width: 430px;
     text-indent: -9999px;
 }
+
+.conversion {
+    display: inline;
+}
+.conversion img {
+    height: 1px;
+    width: 1px;
+    border-style: none;
+}
