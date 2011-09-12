@@ -35,5 +35,17 @@ class VanillaRibbon < Sinatra::Base
         @title = " - #{path.capitalize}"
         erb path.to_sym
       end
+  end
+
+  get '/css/complete.css' do
+    content = ''
+    dir = File.join(File.dirname(__FILE__), "../public/css/")
+    filenames = ['reset.css', 'taf-seafarer-m.css', 'layout.css', 'nivo-slider.css']
+    filenames.each do |filename|
+      File.open(dir+filename, 'r') do |file|
+        content << file.read
+      end
     end
+    content
+  end
 end
