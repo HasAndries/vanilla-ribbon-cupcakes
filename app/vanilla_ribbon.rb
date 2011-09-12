@@ -7,6 +7,21 @@ Sinatra::Base.register Sinatra::Auth
 Sinatra::Base.set :author, RedisAuthor.new
 
 class VanillaRibbon < Sinatra::Base
+  private
+  class << self
+    def concat_files(dir, filenames)
+      content = ''
+      dir = File.join(File.dirname(__FILE__), dir)
+      filenames.each do |filename|
+        File.open(dir+filename, 'r') do |file|
+          content << file.read
+        end
+      end
+      content
+    end
+  end
+
+  public
   use Resource::Admin
   use Resource::Update
 
@@ -37,16 +52,19 @@ class VanillaRibbon < Sinatra::Base
       end
   end
 
-  get '/css/complete.css' do
-    content = ''
-    dir = File.join(File.dirname(__FILE__), "../public/css/")
-    filenames = ['reset.css', 'taf-seafarer-m.css', 'layout.css', 'nivo-slider.css']
-    filenames.each do |filename|
-      File.open(dir+filename, 'r') do |file|
-        content << file.read
-      end
-    end
+  get '/js/complete.js' do
     content_type 'text/css', :charset => 'utf-8'
-    content
+    VanillaRibbon.concat_files "../public/js/", ['jquery/jquery.nivo.slider.pack.js',
+                                                 'jquery/jquery-1.6.1.min.js',
+                                                 'google.js',
+                                                 'main.js']
+  end
+
+  get '/css/complete.css' do
+    content_type 'text/css', :charset => 'utf-8'
+    VanillaRibbon.concat_files "../public/css/", ['reset.css',
+                                                  'taf-seafarer-m.css',
+                                                  'layout.css',
+                                                  'nivo-slider.css']
   end
 end
