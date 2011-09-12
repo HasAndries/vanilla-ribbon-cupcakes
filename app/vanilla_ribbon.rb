@@ -46,6 +46,7 @@ class VanillaRibbon < Sinatra::Base
         content << file.read
       end
     end
+    content_type 'text/css', :charset => 'utf-8'
     content
   end
 end
