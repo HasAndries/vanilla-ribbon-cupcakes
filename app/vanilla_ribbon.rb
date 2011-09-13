@@ -54,8 +54,8 @@ class VanillaRibbon < Sinatra::Base
 
   get '/js/complete.js' do
     content_type 'text/css', :charset => 'utf-8'
-    VanillaRibbon.concat_files "../public/js/", ['jquery/jquery.nivo.slider.pack.js',
-                                                 'jquery/jquery-1.6.1.min.js',
+    VanillaRibbon.concat_files "../public/js/", ['jquery/jquery-1.6.1.min.js',
+                                                 'jquery/jquery.nivo.slider.pack.js',
                                                  'google.js',
                                                  'main.js']
   end
