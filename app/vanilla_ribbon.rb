@@ -22,10 +22,16 @@ class VanillaRibbon < Sinatra::Base
   end
 
   public
+
+  get // do
+    redirect 'http://www.thecupcakegarden.co.za/'
+  end
+
   use Resource::Admin
   use Resource::Update
 
   get '/?' do
+
     @title = ''
     @name = 'index'
     erb :index
