@@ -23,6 +23,9 @@ class VanillaRibbon < Sinatra::Base
 
   public
 
+  get '/' do
+    redirect 'http://www.thecupcakegarden.co.za/'
+  end
   get // do
     redirect 'http://www.thecupcakegarden.co.za/'
   end
